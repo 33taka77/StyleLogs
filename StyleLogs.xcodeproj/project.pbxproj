@@ -7,12 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		81003B531AF3758300600ED6 /* MainCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81003B521AF3758300600ED6 /* MainCollectionViewCell.swift */; };
+		81003B551AF37A0B00600ED6 /* ValueLabelTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81003B541AF37A0B00600ED6 /* ValueLabelTableViewCell.swift */; };
+		81003B571AF37A4300600ED6 /* ValueInputTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81003B561AF37A4300600ED6 /* ValueInputTableViewCell.swift */; };
 		81E161E71AF31C2E0071ED01 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E161E61AF31C2E0071ED01 /* AppDelegate.swift */; };
 		81E161E91AF31C2E0071ED01 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E161E81AF31C2E0071ED01 /* ViewController.swift */; };
 		81E161EC1AF31C2E0071ED01 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81E161EA1AF31C2E0071ED01 /* Main.storyboard */; };
 		81E161EE1AF31C2E0071ED01 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 81E161ED1AF31C2E0071ED01 /* Images.xcassets */; };
 		81E161F11AF31C2E0071ED01 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81E161EF1AF31C2E0071ED01 /* LaunchScreen.xib */; };
 		81E161FD1AF31C2E0071ED01 /* StyleLogsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E161FC1AF31C2E0071ED01 /* StyleLogsTests.swift */; };
+		81E162071AF31C820071ED01 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 81E162061AF31C820071ED01 /* libsqlite3.dylib */; };
+		81E1620A1AF31DB90071ED01 /* SwiftData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E162091AF31DB90071ED01 /* SwiftData.swift */; };
+		81E1620C1AF31DC70071ED01 /* DataMngr.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E1620B1AF31DC70071ED01 /* DataMngr.swift */; };
+		81E1620E1AF31DD00071ED01 /* SmartGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E1620D1AF31DD00071ED01 /* SmartGraph.swift */; };
+		81E162101AF31DE50071ED01 /* GradiateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E1620F1AF31DE50071ED01 /* GradiateView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,6 +34,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		81003B521AF3758300600ED6 /* MainCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainCollectionViewCell.swift; sourceTree = "<group>"; };
+		81003B541AF37A0B00600ED6 /* ValueLabelTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValueLabelTableViewCell.swift; sourceTree = "<group>"; };
+		81003B561AF37A4300600ED6 /* ValueInputTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValueInputTableViewCell.swift; sourceTree = "<group>"; };
 		81E161E11AF31C2E0071ED01 /* StyleLogs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StyleLogs.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		81E161E51AF31C2E0071ED01 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		81E161E61AF31C2E0071ED01 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -36,6 +47,12 @@
 		81E161F61AF31C2E0071ED01 /* StyleLogsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StyleLogsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		81E161FB1AF31C2E0071ED01 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		81E161FC1AF31C2E0071ED01 /* StyleLogsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleLogsTests.swift; sourceTree = "<group>"; };
+		81E162061AF31C820071ED01 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		81E162081AF31CDD0071ED01 /* StyleLogs-BridgeHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "StyleLogs-BridgeHeader.h"; sourceTree = "<group>"; };
+		81E162091AF31DB90071ED01 /* SwiftData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftData.swift; sourceTree = "<group>"; };
+		81E1620B1AF31DC70071ED01 /* DataMngr.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataMngr.swift; sourceTree = "<group>"; };
+		81E1620D1AF31DD00071ED01 /* SmartGraph.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SmartGraph.swift; sourceTree = "<group>"; };
+		81E1620F1AF31DE50071ED01 /* GradiateView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradiateView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81E162071AF31C820071ED01 /* libsqlite3.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,6 +77,7 @@
 		81E161D81AF31C2E0071ED01 = {
 			isa = PBXGroup;
 			children = (
+				81E162061AF31C820071ED01 /* libsqlite3.dylib */,
 				81E161E31AF31C2E0071ED01 /* StyleLogs */,
 				81E161F91AF31C2E0071ED01 /* StyleLogsTests */,
 				81E161E21AF31C2E0071ED01 /* Products */,
@@ -77,12 +96,20 @@
 		81E161E31AF31C2E0071ED01 /* StyleLogs */ = {
 			isa = PBXGroup;
 			children = (
+				81E1620F1AF31DE50071ED01 /* GradiateView.swift */,
+				81E1620D1AF31DD00071ED01 /* SmartGraph.swift */,
+				81E1620B1AF31DC70071ED01 /* DataMngr.swift */,
+				81E162091AF31DB90071ED01 /* SwiftData.swift */,
 				81E161E61AF31C2E0071ED01 /* AppDelegate.swift */,
 				81E161E81AF31C2E0071ED01 /* ViewController.swift */,
 				81E161EA1AF31C2E0071ED01 /* Main.storyboard */,
+				81003B521AF3758300600ED6 /* MainCollectionViewCell.swift */,
 				81E161ED1AF31C2E0071ED01 /* Images.xcassets */,
 				81E161EF1AF31C2E0071ED01 /* LaunchScreen.xib */,
 				81E161E41AF31C2E0071ED01 /* Supporting Files */,
+				81E162081AF31CDD0071ED01 /* StyleLogs-BridgeHeader.h */,
+				81003B541AF37A0B00600ED6 /* ValueLabelTableViewCell.swift */,
+				81003B561AF37A4300600ED6 /* ValueInputTableViewCell.swift */,
 			);
 			path = StyleLogs;
 			sourceTree = "<group>";
@@ -212,8 +239,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81003B551AF37A0B00600ED6 /* ValueLabelTableViewCell.swift in Sources */,
+				81003B531AF3758300600ED6 /* MainCollectionViewCell.swift in Sources */,
 				81E161E91AF31C2E0071ED01 /* ViewController.swift in Sources */,
+				81E1620A1AF31DB90071ED01 /* SwiftData.swift in Sources */,
 				81E161E71AF31C2E0071ED01 /* AppDelegate.swift in Sources */,
+				81E1620C1AF31DC70071ED01 /* DataMngr.swift in Sources */,
+				81003B571AF37A4300600ED6 /* ValueInputTableViewCell.swift in Sources */,
+				81E1620E1AF31DD00071ED01 /* SmartGraph.swift in Sources */,
+				81E162101AF31DE50071ED01 /* GradiateView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -345,6 +379,7 @@
 				INFOPLIST_FILE = StyleLogs/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "StyleLogs/StyleLogs-BridgeHeader.h";
 			};
 			name = Debug;
 		};
@@ -355,6 +390,7 @@
 				INFOPLIST_FILE = StyleLogs/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "StyleLogs/StyleLogs-BridgeHeader.h";
 			};
 			name = Release;
 		};
@@ -411,6 +447,7 @@
 				81E162021AF31C2E0071ED01 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		81E162031AF31C2E0071ED01 /* Build configuration list for PBXNativeTarget "StyleLogsTests" */ = {
 			isa = XCConfigurationList;
@@ -419,6 +456,7 @@
 				81E162051AF31C2E0071ED01 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
