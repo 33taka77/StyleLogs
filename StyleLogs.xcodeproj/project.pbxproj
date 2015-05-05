@@ -10,6 +10,12 @@
 		81003B531AF3758300600ED6 /* MainCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81003B521AF3758300600ED6 /* MainCollectionViewCell.swift */; };
 		81003B551AF37A0B00600ED6 /* ValueLabelTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81003B541AF37A0B00600ED6 /* ValueLabelTableViewCell.swift */; };
 		81003B571AF37A4300600ED6 /* ValueInputTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81003B561AF37A4300600ED6 /* ValueInputTableViewCell.swift */; };
+		81003B591AF5B4AB00600ED6 /* ListDisplayTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81003B581AF5B4AB00600ED6 /* ListDisplayTableViewCell.swift */; };
+		81003B5B1AF5B4EF00600ED6 /* ListDisplayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81003B5A1AF5B4EF00600ED6 /* ListDisplayViewController.swift */; };
+		81C9D9491AF61B75009C7328 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C9D9481AF61B75009C7328 /* CalendarViewController.swift */; };
+		81C9D94B1AF61F10009C7328 /* CalendarCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C9D94A1AF61F10009C7328 /* CalendarCollectionViewCell.swift */; };
+		81C9D94D1AF70EB3009C7328 /* GraphViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C9D94C1AF70EB3009C7328 /* GraphViewController.swift */; };
+		81D83E781AF871E500057D5D /* SettingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D83E771AF871E500057D5D /* SettingTableViewController.swift */; };
 		81E161E71AF31C2E0071ED01 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E161E61AF31C2E0071ED01 /* AppDelegate.swift */; };
 		81E161E91AF31C2E0071ED01 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E161E81AF31C2E0071ED01 /* ViewController.swift */; };
 		81E161EC1AF31C2E0071ED01 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81E161EA1AF31C2E0071ED01 /* Main.storyboard */; };
@@ -37,6 +43,12 @@
 		81003B521AF3758300600ED6 /* MainCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainCollectionViewCell.swift; sourceTree = "<group>"; };
 		81003B541AF37A0B00600ED6 /* ValueLabelTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValueLabelTableViewCell.swift; sourceTree = "<group>"; };
 		81003B561AF37A4300600ED6 /* ValueInputTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValueInputTableViewCell.swift; sourceTree = "<group>"; };
+		81003B581AF5B4AB00600ED6 /* ListDisplayTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListDisplayTableViewCell.swift; sourceTree = "<group>"; };
+		81003B5A1AF5B4EF00600ED6 /* ListDisplayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListDisplayViewController.swift; sourceTree = "<group>"; };
+		81C9D9481AF61B75009C7328 /* CalendarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
+		81C9D94A1AF61F10009C7328 /* CalendarCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarCollectionViewCell.swift; sourceTree = "<group>"; };
+		81C9D94C1AF70EB3009C7328 /* GraphViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphViewController.swift; sourceTree = "<group>"; };
+		81D83E771AF871E500057D5D /* SettingTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingTableViewController.swift; sourceTree = "<group>"; };
 		81E161E11AF31C2E0071ED01 /* StyleLogs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StyleLogs.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		81E161E51AF31C2E0071ED01 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		81E161E61AF31C2E0071ED01 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -103,6 +115,10 @@
 				81E161E61AF31C2E0071ED01 /* AppDelegate.swift */,
 				81E161E81AF31C2E0071ED01 /* ViewController.swift */,
 				81E161EA1AF31C2E0071ED01 /* Main.storyboard */,
+				81D83E771AF871E500057D5D /* SettingTableViewController.swift */,
+				81C9D94C1AF70EB3009C7328 /* GraphViewController.swift */,
+				81C9D9481AF61B75009C7328 /* CalendarViewController.swift */,
+				81C9D94A1AF61F10009C7328 /* CalendarCollectionViewCell.swift */,
 				81003B521AF3758300600ED6 /* MainCollectionViewCell.swift */,
 				81E161ED1AF31C2E0071ED01 /* Images.xcassets */,
 				81E161EF1AF31C2E0071ED01 /* LaunchScreen.xib */,
@@ -110,6 +126,8 @@
 				81E162081AF31CDD0071ED01 /* StyleLogs-BridgeHeader.h */,
 				81003B541AF37A0B00600ED6 /* ValueLabelTableViewCell.swift */,
 				81003B561AF37A4300600ED6 /* ValueInputTableViewCell.swift */,
+				81003B581AF5B4AB00600ED6 /* ListDisplayTableViewCell.swift */,
+				81003B5A1AF5B4EF00600ED6 /* ListDisplayViewController.swift */,
 			);
 			path = StyleLogs;
 			sourceTree = "<group>";
@@ -239,11 +257,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81C9D9491AF61B75009C7328 /* CalendarViewController.swift in Sources */,
 				81003B551AF37A0B00600ED6 /* ValueLabelTableViewCell.swift in Sources */,
+				81C9D94B1AF61F10009C7328 /* CalendarCollectionViewCell.swift in Sources */,
 				81003B531AF3758300600ED6 /* MainCollectionViewCell.swift in Sources */,
+				81003B591AF5B4AB00600ED6 /* ListDisplayTableViewCell.swift in Sources */,
 				81E161E91AF31C2E0071ED01 /* ViewController.swift in Sources */,
 				81E1620A1AF31DB90071ED01 /* SwiftData.swift in Sources */,
+				81003B5B1AF5B4EF00600ED6 /* ListDisplayViewController.swift in Sources */,
 				81E161E71AF31C2E0071ED01 /* AppDelegate.swift in Sources */,
+				81D83E781AF871E500057D5D /* SettingTableViewController.swift in Sources */,
+				81C9D94D1AF70EB3009C7328 /* GraphViewController.swift in Sources */,
 				81E1620C1AF31DC70071ED01 /* DataMngr.swift in Sources */,
 				81003B571AF37A4300600ED6 /* ValueInputTableViewCell.swift in Sources */,
 				81E1620E1AF31DD00071ED01 /* SmartGraph.swift in Sources */,

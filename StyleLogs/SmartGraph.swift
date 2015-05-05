@@ -21,7 +21,10 @@ class SmartGraph: UIView {
     
     var targetWeight:CGFloat = 68
     
-    
+    var graph1Color:UIColor = UIColor.blackColor()
+    var graph2Color:UIColor = UIColor.whiteColor()
+    var graph1Label:String = "朝"
+    var graph2Label:String = "夕"
     // Only override drawRect: if you perform custom drawing.
     // An empty implementation adversely affects performance during animation.
     override func drawRect(rect: CGRect) {
@@ -39,8 +42,9 @@ class SmartGraph: UIView {
         let margin:CGFloat = 20.0
 
         self.drawAxis(margin, topBorder: topBorder, bottomBorder: bottomBorder, width: width, height: height)
-        self.drawGraph(plotData1, margin: margin, topBorder: topBorder, bottomBorder: bottomBorder, width: width, height: height, color: UIColor.blackColor())
-        self.drawGraph(plotData2, margin: margin, topBorder: topBorder, bottomBorder: bottomBorder, width: width, height: height, color: UIColor.whiteColor())
+        self.drawGraph(plotData1, margin: margin, topBorder: topBorder, bottomBorder: bottomBorder, width: width, height: height, color: graph1Color)
+        self.drawGraph(plotData2, margin: margin, topBorder: topBorder, bottomBorder: bottomBorder, width: width, height: height, color: graph2Color)
+        self.showSampleLine(height, margin: margin, bottomBorder: bottomBorder)
     }
     
     private func makeGradiation( context:CGContextRef ) {
@@ -60,8 +64,31 @@ class SmartGraph: UIView {
             0)
     }
     
+    private func showSampleLine(height:CGFloat, margin:CGFloat, bottomBorder:CGFloat) {
+        let lineLength:CGFloat = 50
+        let lineInterval:CGFloat = 150
+        var linePath = UIBezierPath()
+        linePath.moveToPoint(CGPoint(x: margin*2, y: height - (bottomBorder-30)))
+        linePath.addLineToPoint(CGPoint(x: margin*2+lineLength, y: height - (bottomBorder-30)))
+        let color = graph1Color
+        color.setStroke()
+        linePath.lineWidth = 1.0
+        linePath.stroke()
+        self.drawText( margin*2+lineLength+5,y: height - (bottomBorder-30)-10, string: graph1Label, fontSize: 8.0, textColor: UIColor.whiteColor())
+        
+        var linePath2 = UIBezierPath()
+        linePath2.moveToPoint(CGPoint(x: margin*2+lineInterval, y: height - (bottomBorder-30)))
+        linePath2.addLineToPoint(CGPoint(x: margin*2+lineInterval+lineLength, y: height - (bottomBorder-30)))
+        let color2 = graph2Color
+        color2.setStroke()
+        linePath2.lineWidth = 1.0
+        linePath2.stroke()
+        self.drawText( margin*2+lineInterval+lineLength+5,y: height - (bottomBorder-30)-10, string: graph2Label, fontSize: 8.0, textColor: UIColor.whiteColor())
+    }
+    
     private func drawAxis(margin:CGFloat, topBorder:CGFloat, bottomBorder:CGFloat, width:CGFloat, height:CGFloat) {
         //Draw horizontal graph lines on the top of everything
+        cleanupLabel()
         var linePath = UIBezierPath()
         let graphHeight = height - topBorder - bottomBorder
         
@@ -111,7 +138,7 @@ class SmartGraph: UIView {
             println("error")
         }
         let space = (width - margin*2)/count
-        for var j:Int = 0; j < Int(count); j++ {
+        for var j:Int = 0; j < plotLabel.count; j++ {
             drawText( space*(CGFloat(j)+1),y: height - bottomBorder, string: plotLabel[j], fontSize: 8.0, textColor: UIColor.whiteColor())
         }
         
@@ -127,6 +154,13 @@ class SmartGraph: UIView {
         label.text = string
         label.frame = CGRectMake(x, y, 100, 20)
         self.addSubview(label)
+    }
+    private func cleanupLabel() {
+        for var i = 0; i < self.subviews.count; i++ {
+            let item: UIView = self.subviews[i] as! UIView
+            item.hidden = true
+            item.removeFromSuperview()
+        }
     }
     
     private func drawGraph(data:[CGFloat],margin:CGFloat, topBorder:CGFloat, bottomBorder:CGFloat, width:CGFloat, height:CGFloat, color:UIColor) {
@@ -144,12 +178,21 @@ class SmartGraph: UIView {
         color.setFill()
         color.setStroke()
         var graphPath = UIBezierPath()
-        graphPath.moveToPoint(CGPoint(x:xPoint(0),
-            y:yPoint(data[0])))
-        
-        for i in 1..<data.count {
+        var startPoint:Int = 0
+        for var j = 0; j < data.count; j++ {
+            if data[j] != -1 {
+                graphPath.moveToPoint(CGPoint(x:xPoint(j),
+                    y:yPoint(data[j])))
+                break
+            }
+            startPoint++
+        }
+        if startPoint > data.count-1 {
+            return
+        }
+        for i in startPoint+1..<data.count {
             let val = data[i]
-            if val == 0 {
+            if val == -1 {
                 continue
             }
             let nextPoint = CGPoint(x:xPoint(i),
@@ -161,7 +204,7 @@ class SmartGraph: UIView {
         
         for i in 0..<data.count {
             let val = data[i]
-            if val == 0 {
+            if val == -1 {
                 continue
             }
             var point = CGPoint(x:xPoint(i), y:yPoint(data[i]))

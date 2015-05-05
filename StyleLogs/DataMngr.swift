@@ -177,7 +177,104 @@ class DataMngr{
             return (achive/bandWidth) * 100.0
         }
     }
-        
+    
+    private func searchDay( list:[Dictionary<String,Any>], date:NSDate )->Int {
+        for (index, dict) in enumerate(list) {
+            if date == (dict["date"] as? NSDate)! {
+                return index
+            }
+        }
+        return -1
+    }
+    func onedayDelta( today:NSDate )->Float {
+            let list = selectAll()
+            let index = searchDay( list, date: today )
+            if index == -1 {
+                return -1
+            }
+            var dict = list[index]
+            var total:Float = 0.0
+            var counter:Int = 0
+            var weight = (dict["weightMorning"] as? Double)!
+            if weight != -1 {
+                total += Float(weight)
+                counter++
+            }
+            weight = (dict["weightEvening"] as? Double)!
+            if weight != -1 {
+                total += Float(weight)
+                counter++
+            }
+            if counter == 0 {
+                return -1
+            }
+            let todayAve = total/Float(counter)
+            dict = list[index-1]
+            counter = 0
+            total = 0
+            weight = (dict["weightMorning"] as? Double)!
+            if weight != -1 {
+                total += Float(weight)
+                counter++
+            }
+            weight = (dict["weightEvening"] as? Double)!
+            if weight != -1 {
+                total += Float(weight)
+                counter++
+            }
+            if counter == 0 {
+                return -1
+            }
+            let yesterday = total/Float(counter)
+            
+            return todayAve - yesterday
+    }
+    
+    func ondeDayAverageWeight( date:NSDate )->Float {
+        let list = selectAll()
+        let index = searchDay( list, date: date )
+        var dict = list[index]
+        var total:Float = 0.0
+        var counter:Int = 0
+        var weight = (dict["weightMorning"] as? Double)!
+        if weight != -1 {
+            total += Float(weight)
+            counter++
+        }
+        weight = (dict["weightEvening"] as? Double)!
+        if weight != -1 {
+            total += Float(weight)
+            counter++
+        }
+        if counter == 0 {
+            return -1
+        }
+        let todayAve = total/Float(counter)
+        return todayAve
+    }
+    func ondeDayAverageFat( date:NSDate )->Float {
+        let list = selectAll()
+        let index = searchDay( list, date: date )
+        var dict = list[index]
+        var total:Float = 0.0
+        var counter:Int = 0
+        var weight = (dict["bodyFatPercentageMorning"] as? Double)!
+        if weight != -1 {
+            total += Float(weight)
+            counter++
+        }
+        weight = (dict["bodyFatPercentageEvening"] as? Double)!
+        if weight != -1 {
+            total += Float(weight)
+            counter++
+        }
+        if counter == 0 {
+            return -1
+        }
+        let todayAve = total/Float(counter)
+        return todayAve
+    }
+    
     init(){
         //self.deleteTable()
         if !self.isExistDataBase() {
