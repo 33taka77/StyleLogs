@@ -1012,14 +1012,18 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="CXb-nY-Y7j" id="63j-HY-M7b">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tv3-1s-Na5">
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tv3-1s-Na5">
                                                     <rect key="frame" x="144" y="7" width="97" height="30"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="97" id="21Y-Jn-TMM"/>
                                                         <constraint firstAttribute="height" constant="30" id="VM3-HJ-WX8"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits"/>
+                                                    <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                                    <connections>
+                                                        <action selector="heightFieldReturned:" destination="dKh-Ez-JxB" eventType="editingDidEnd" id="RHo-Wv-cpk"/>
+                                                        <outlet property="delegate" destination="dKh-Ez-JxB" id="Zbp-Mc-jHP"/>
+                                                    </connections>
                                                 </textField>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="cm" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q3W-3f-oM2">
                                                     <rect key="frame" x="253" y="11" width="24" height="21"/>
@@ -1057,14 +1061,17 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="LQW-dR-aEQ" id="19m-KJ-7bW">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jCg-n9-rtv">
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jCg-n9-rtv">
                                                     <rect key="frame" x="143" y="7" width="98" height="30"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="30" id="4Pa-y7-ixr"/>
                                                         <constraint firstAttribute="width" constant="98" id="cYw-0V-OUD"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits"/>
+                                                    <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                                    <connections>
+                                                        <outlet property="delegate" destination="dKh-Ez-JxB" id="hkc-Wc-hxF"/>
+                                                    </connections>
                                                 </textField>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kg" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e43-qE-hhf">
                                                     <rect key="frame" x="253" y="11" width="22" height="21"/>
@@ -1102,14 +1109,17 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ZAK-sh-egt" id="1JR-wu-jqz">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Obo-4A-lqS">
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Obo-4A-lqS">
                                                     <rect key="frame" x="142" y="8" width="99" height="30"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="30" id="UYR-nj-yaS"/>
                                                         <constraint firstAttribute="width" constant="99" id="aOh-YN-qDb"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits"/>
+                                                    <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                                    <connections>
+                                                        <outlet property="delegate" destination="dKh-Ez-JxB" id="KOO-25-sL9"/>
+                                                    </connections>
                                                 </textField>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="%" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vs8-1M-5tc">
                                                     <rect key="frame" x="249" y="11" width="18" height="21"/>
@@ -1195,6 +1205,12 @@
                         </connections>
                     </tableView>
                     <tabBarItem key="tabBarItem" title="設定" id="AYh-cT-0az"/>
+                    <connections>
+                        <outlet property="height" destination="tv3-1s-Na5" id="adi-cV-gB4"/>
+                        <outlet property="targetFat" destination="Obo-4A-lqS" id="lu4-nv-hP9"/>
+                        <outlet property="targetWeight" destination="jCg-n9-rtv" id="JJh-FV-zFK"/>
+                        <outlet property="version" destination="tVG-Rk-KO5" id="4Bi-EW-EFl"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ahr-rP-nuG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
