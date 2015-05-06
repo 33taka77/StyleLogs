@@ -183,7 +183,7 @@ class GraphViewController: UIViewController {
             return
         }
         for var i=0; i < 365; i++ {
-            let dict = styleDatas[startIndex-(31-i)]
+            let dict = styleDatas[startIndex-(364-i)]
             let date:NSDate = (dict["date"] as? NSDate)!
             let formatter:NSDateFormatter = NSDateFormatter()
             formatter.dateFormat = "MM/dd"
@@ -232,7 +232,7 @@ class GraphViewController: UIViewController {
             return
         }
         for var i=0; i < 180; i++ {
-            let dict = styleDatas[startIndex-(31-i)]
+            let dict = styleDatas[startIndex-(179-i)]
             let date:NSDate = (dict["date"] as? NSDate)!
             let formatter:NSDateFormatter = NSDateFormatter()
             formatter.dateFormat = "MM/dd"
@@ -279,7 +279,7 @@ class GraphViewController: UIViewController {
             return
         }
         for var i=0; i < 90; i++ {
-            let dict = styleDatas[startIndex-(31-i)]
+            let dict = styleDatas[startIndex-(89-i)]
             let date:NSDate = (dict["date"] as? NSDate)!
             let formatter:NSDateFormatter = NSDateFormatter()
             formatter.dateFormat = "MM/dd"
@@ -327,7 +327,7 @@ class GraphViewController: UIViewController {
             return
         }
         for var i=0; i < 31; i++ {
-            let dict = styleDatas[startIndex-(31-i)]
+            let dict = styleDatas[startIndex-(30-i)]
             let date:NSDate = (dict["date"] as? NSDate)!
             let formatter:NSDateFormatter = NSDateFormatter()
             formatter.dateFormat = "MM/dd"
@@ -451,7 +451,12 @@ class GraphViewController: UIViewController {
         styleDatas = dataManager.selectAll()
         drawWeekGraph(0)
         let dataCount = styleDatas.count
-        if dataCount < 90 {
+        if dataCount < 31 {
+            scaleSelector.setEnabled(false , forSegmentAtIndex: 1)
+            scaleSelector.setEnabled(false , forSegmentAtIndex: 2)
+            scaleSelector.setEnabled(false, forSegmentAtIndex: 3)
+            scaleSelector.setEnabled(false, forSegmentAtIndex: 4)
+        }else if dataCount < 90 {
             scaleSelector.setEnabled(false , forSegmentAtIndex: 2)
             scaleSelector.setEnabled(false, forSegmentAtIndex: 3)
             scaleSelector.setEnabled(false, forSegmentAtIndex: 4)

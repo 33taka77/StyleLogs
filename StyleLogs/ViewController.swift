@@ -68,6 +68,7 @@ class ViewController: UIViewController,UICollectionViewDelegateFlowLayout,UIColl
         self.collectionView.frame = CGRectMake(0,barHeight,self.view.frame.width, self.view.frame.height-barHeight-statusPanelHeight-2*statusPanelMargin-buttomzbarHeight)
         setupDateData()
         seupPanelInfo()
+        currentPage = styleLogDatas.count-1
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "GetValue", name: NOTFY_UPDATE_VALUE, object:nil)
     }
     func GetValue() {
@@ -78,9 +79,12 @@ class ViewController: UIViewController,UICollectionViewDelegateFlowLayout,UIColl
         seupPanelInfo()
     }
 
+    override func shouldAutorotate() -> Bool {
+        return false
+    }
     override func viewDidLayoutSubviews() {
         let offset = styleLogDatas.count
-        movePage(offset-1)
+        movePage(currentPage)
         nextButton.enabled = false
     }
     override func didReceiveMemoryWarning() {
@@ -88,6 +92,9 @@ class ViewController: UIViewController,UICollectionViewDelegateFlowLayout,UIColl
         // Dispose of any resources that can be recreated.
     }
 
+    override func viewDidAppear(animated: Bool) {
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "GetValue", name: NOTFY_UPDATE_VALUE, object:nil)
+    }
     override func viewDidDisappear(animated: Bool) {
         NSNotificationCenter.defaultCenter().removeObserver(self)
     }

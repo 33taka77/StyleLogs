@@ -45,8 +45,13 @@ class ListDisplayViewController: UIViewController,UITableViewDataSource,UITableV
         }
     }
 
+    override func viewDidLayoutSubviews() {
+        let index:NSIndexPath = NSIndexPath(forRow: styleLogDatas[sectionArray.count-1].count-1, inSection: sectionArray.count-1)
+        self.tableView.scrollToRowAtIndexPath(index, atScrollPosition: UITableViewScrollPosition.Bottom, animated: false)
+    }
     override func viewDidAppear(animated: Bool) {
         tableView.reloadData()
+        //scrollView.setContentOffset(
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -116,8 +121,14 @@ class ListDisplayViewController: UIViewController,UITableViewDataSource,UITableV
         let delta:Float = dataManager.onedayDelta((data["date"] as? NSDate)!)
         if delta == -1 {
             cell.deltaOneDay.text = "--"
+            cell.deltaImage.image = nil
         }else{
             cell.deltaOneDay.text = String(format: "%.2f", arguments: [delta])
+            if delta < 0 {
+                cell.deltaImage.image = UIImage(named: "1430837614_StockIndexUp48.png")
+            }else{
+                cell.deltaImage.image = UIImage(named: "1430837623_StockIndexDown48.png")
+            }
         }
         let averageWeight = dataManager.ondeDayAverageWeight((data["date"] as? NSDate)!)
         if averageWeight == -1 {

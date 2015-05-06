@@ -27,8 +27,17 @@ class MainCollectionViewCell: UICollectionViewCell,UITableViewDataSource,UITable
         }
         tableView.reloadData()
     }
-    
+    /*
+    override init(frame: CGRect) {
+        self.tableView.setTranslatesAutoresizingMaskIntoConstraints(true)
+        self.tableView.frame = frame
+        super.init(frame: frame)
+    }
 
+    required init(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+    }
+*/
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
     }
