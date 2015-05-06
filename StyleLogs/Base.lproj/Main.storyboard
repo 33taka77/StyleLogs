@@ -740,16 +740,6 @@
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                 </view>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1日平均体重" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vGR-8h-Yq6">
-                                                    <rect key="frame" x="70" y="8" width="74" height="21"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="21" id="dEz-bG-AhS"/>
-                                                        <constraint firstAttribute="width" constant="74" id="lfd-uN-dwN"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="（朝）" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="99d-tS-ZBN">
                                                     <rect key="frame" x="68" y="26" width="37" height="21"/>
                                                     <constraints>
@@ -806,8 +796,8 @@
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="1日平均体脂肪率" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RD7-00-Hw1">
-                                                    <rect key="frame" x="195" y="8" width="106" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="平均体脂肪率" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RD7-00-Hw1">
+                                                    <rect key="frame" x="203" y="8" width="106" height="21"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="106" id="D8k-tl-Vt6"/>
                                                         <constraint firstAttribute="height" constant="21" id="n5d-kr-CHA"/>
@@ -917,6 +907,16 @@
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="平均体重" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vGR-8h-Yq6">
+                                                    <rect key="frame" x="70" y="8" width="55" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="dEz-bG-AhS"/>
+                                                        <constraint firstAttribute="width" constant="55" id="lfd-uN-dwN"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="G9D-bQ-sOC" firstAttribute="leading" secondItem="Lny-zn-cit" secondAttribute="trailing" constant="5" id="0KI-eb-fBu"/>
@@ -937,7 +937,7 @@
                                                 <constraint firstItem="mfT-SR-XxY" firstAttribute="top" secondItem="l9i-i9-xnP" secondAttribute="bottom" constant="-3" id="NyK-9b-Tnm"/>
                                                 <constraint firstItem="jdr-3X-23B" firstAttribute="firstBaseline" secondItem="sFM-lL-E0G" secondAttribute="firstBaseline" id="Thd-zX-pgF"/>
                                                 <constraint firstItem="RMd-8w-5vO" firstAttribute="top" secondItem="RD7-00-Hw1" secondAttribute="bottom" constant="15" id="TjY-dA-KC1"/>
-                                                <constraint firstItem="Vha-du-VMB" firstAttribute="leading" secondItem="RD7-00-Hw1" secondAttribute="trailing" constant="-17" id="YU1-SG-iLr"/>
+                                                <constraint firstItem="Vha-du-VMB" firstAttribute="leading" secondItem="RD7-00-Hw1" secondAttribute="trailing" constant="-25" id="YU1-SG-iLr"/>
                                                 <constraint firstItem="eFR-va-JYy" firstAttribute="leading" secondItem="yG4-I6-Mkv" secondAttribute="trailing" constant="31" id="atF-iz-adb"/>
                                                 <constraint firstItem="sFM-lL-E0G" firstAttribute="leading" secondItem="SiF-9r-kzy" secondAttribute="trailing" constant="31" id="daS-X6-jbQ"/>
                                                 <constraint firstItem="l9i-i9-xnP" firstAttribute="top" secondItem="RD7-00-Hw1" secondAttribute="bottom" constant="-3" id="hcC-R8-pOQ"/>
