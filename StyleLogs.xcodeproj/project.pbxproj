@@ -15,6 +15,19 @@
 		812DC97F1AF8D2BC000E9380 /* 1430837487_next-32.png in Resources */ = {isa = PBXBuildFile; fileRef = 812DC97E1AF8D2BC000E9380 /* 1430837487_next-32.png */; };
 		812DC9811AF8D33D000E9380 /* 1430837494_previous-32.png in Resources */ = {isa = PBXBuildFile; fileRef = 812DC9801AF8D33D000E9380 /* 1430837494_previous-32.png */; };
 		812DC9831AF8D571000E9380 /* 1430836978_calendar-24.png in Resources */ = {isa = PBXBuildFile; fileRef = 812DC9821AF8D571000E9380 /* 1430836978_calendar-24.png */; };
+		812DC9861AF9E6F9000E9380 /* テンキー.png in Resources */ = {isa = PBXBuildFile; fileRef = 812DC9851AF9E6F9000E9380 /* テンキー.png */; };
+		812DC9921AF9EADC000E9380 /* テンキーBack.png in Resources */ = {isa = PBXBuildFile; fileRef = 812DC9871AF9EADC000E9380 /* テンキーBack.png */; };
+		812DC9931AF9EADC000E9380 /* テンキーDot.png in Resources */ = {isa = PBXBuildFile; fileRef = 812DC9881AF9EADC000E9380 /* テンキーDot.png */; };
+		812DC9941AF9EADC000E9380 /* テンキー9.png in Resources */ = {isa = PBXBuildFile; fileRef = 812DC9891AF9EADC000E9380 /* テンキー9.png */; };
+		812DC9951AF9EADC000E9380 /* テンキー8.png in Resources */ = {isa = PBXBuildFile; fileRef = 812DC98A1AF9EADC000E9380 /* テンキー8.png */; };
+		812DC9961AF9EADC000E9380 /* テンキー7.png in Resources */ = {isa = PBXBuildFile; fileRef = 812DC98B1AF9EADC000E9380 /* テンキー7.png */; };
+		812DC9971AF9EADC000E9380 /* テンキー6.png in Resources */ = {isa = PBXBuildFile; fileRef = 812DC98C1AF9EADC000E9380 /* テンキー6.png */; };
+		812DC9981AF9EADC000E9380 /* テンキー5.png in Resources */ = {isa = PBXBuildFile; fileRef = 812DC98D1AF9EADC000E9380 /* テンキー5.png */; };
+		812DC9991AF9EADC000E9380 /* テンキー4.png in Resources */ = {isa = PBXBuildFile; fileRef = 812DC98E1AF9EADC000E9380 /* テンキー4.png */; };
+		812DC99A1AF9EADC000E9380 /* テンキー3.png in Resources */ = {isa = PBXBuildFile; fileRef = 812DC98F1AF9EADC000E9380 /* テンキー3.png */; };
+		812DC99B1AF9EADC000E9380 /* テンキー2.png in Resources */ = {isa = PBXBuildFile; fileRef = 812DC9901AF9EADC000E9380 /* テンキー2.png */; };
+		812DC99C1AF9EADC000E9380 /* テンキー1.png in Resources */ = {isa = PBXBuildFile; fileRef = 812DC9911AF9EADC000E9380 /* テンキー1.png */; };
+		812DC99E1AF9EC32000E9380 /* TenKeyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812DC99D1AF9EC32000E9380 /* TenKeyTableViewCell.swift */; };
 		81C9D9491AF61B75009C7328 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C9D9481AF61B75009C7328 /* CalendarViewController.swift */; };
 		81C9D94B1AF61F10009C7328 /* CalendarCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C9D94A1AF61F10009C7328 /* CalendarCollectionViewCell.swift */; };
 		81C9D94D1AF70EB3009C7328 /* GraphViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C9D94C1AF70EB3009C7328 /* GraphViewController.swift */; };
@@ -69,6 +82,19 @@
 		812DC97E1AF8D2BC000E9380 /* 1430837487_next-32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "1430837487_next-32.png"; sourceTree = "<group>"; };
 		812DC9801AF8D33D000E9380 /* 1430837494_previous-32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "1430837494_previous-32.png"; sourceTree = "<group>"; };
 		812DC9821AF8D571000E9380 /* 1430836978_calendar-24.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "1430836978_calendar-24.png"; sourceTree = "<group>"; };
+		812DC9851AF9E6F9000E9380 /* テンキー.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "テンキー.png"; sourceTree = "<group>"; };
+		812DC9871AF9EADC000E9380 /* テンキーBack.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "テンキーBack.png"; sourceTree = "<group>"; };
+		812DC9881AF9EADC000E9380 /* テンキーDot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "テンキーDot.png"; sourceTree = "<group>"; };
+		812DC9891AF9EADC000E9380 /* テンキー9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "テンキー9.png"; sourceTree = "<group>"; };
+		812DC98A1AF9EADC000E9380 /* テンキー8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "テンキー8.png"; sourceTree = "<group>"; };
+		812DC98B1AF9EADC000E9380 /* テンキー7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "テンキー7.png"; sourceTree = "<group>"; };
+		812DC98C1AF9EADC000E9380 /* テンキー6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "テンキー6.png"; sourceTree = "<group>"; };
+		812DC98D1AF9EADC000E9380 /* テンキー5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "テンキー5.png"; sourceTree = "<group>"; };
+		812DC98E1AF9EADC000E9380 /* テンキー4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "テンキー4.png"; sourceTree = "<group>"; };
+		812DC98F1AF9EADC000E9380 /* テンキー3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "テンキー3.png"; sourceTree = "<group>"; };
+		812DC9901AF9EADC000E9380 /* テンキー2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "テンキー2.png"; sourceTree = "<group>"; };
+		812DC9911AF9EADC000E9380 /* テンキー1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "テンキー1.png"; sourceTree = "<group>"; };
+		812DC99D1AF9EC32000E9380 /* TenKeyTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TenKeyTableViewCell.swift; sourceTree = "<group>"; };
 		81C9D9481AF61B75009C7328 /* CalendarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		81C9D94A1AF61F10009C7328 /* CalendarCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarCollectionViewCell.swift; sourceTree = "<group>"; };
 		81C9D94C1AF70EB3009C7328 /* GraphViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphViewController.swift; sourceTree = "<group>"; };
@@ -131,6 +157,18 @@
 		812DC9841AF8D6B3000E9380 /* icon */ = {
 			isa = PBXGroup;
 			children = (
+				812DC9871AF9EADC000E9380 /* テンキーBack.png */,
+				812DC9881AF9EADC000E9380 /* テンキーDot.png */,
+				812DC9891AF9EADC000E9380 /* テンキー9.png */,
+				812DC98A1AF9EADC000E9380 /* テンキー8.png */,
+				812DC98B1AF9EADC000E9380 /* テンキー7.png */,
+				812DC98C1AF9EADC000E9380 /* テンキー6.png */,
+				812DC98D1AF9EADC000E9380 /* テンキー5.png */,
+				812DC98E1AF9EADC000E9380 /* テンキー4.png */,
+				812DC98F1AF9EADC000E9380 /* テンキー3.png */,
+				812DC9901AF9EADC000E9380 /* テンキー2.png */,
+				812DC9911AF9EADC000E9380 /* テンキー1.png */,
+				812DC9851AF9E6F9000E9380 /* テンキー.png */,
 				81D76DE81AF8CC240080D5FA /* 1430837377_pen-checkbox-32.png */,
 				812DC9821AF8D571000E9380 /* 1430836978_calendar-24.png */,
 				812DC9801AF8D33D000E9380 /* 1430837494_previous-32.png */,
@@ -186,6 +224,7 @@
 				81E161E61AF31C2E0071ED01 /* AppDelegate.swift */,
 				81E161E81AF31C2E0071ED01 /* ViewController.swift */,
 				81E161EA1AF31C2E0071ED01 /* Main.storyboard */,
+				812DC99D1AF9EC32000E9380 /* TenKeyTableViewCell.swift */,
 				81D83E771AF871E500057D5D /* SettingTableViewController.swift */,
 				81C9D94C1AF70EB3009C7328 /* GraphViewController.swift */,
 				81C9D9481AF61B75009C7328 /* CalendarViewController.swift */,
@@ -314,8 +353,10 @@
 				812DC9811AF8D33D000E9380 /* 1430837494_previous-32.png in Resources */,
 				81D76DF31AF8CDA70080D5FA /* 1430837487_next-48.png in Resources */,
 				81E161EC1AF31C2E0071ED01 /* Main.storyboard in Resources */,
+				812DC9931AF9EADC000E9380 /* テンキーDot.png in Resources */,
 				81D76DE01AF8CB380080D5FA /* 1430837623_Stock Index Down.png in Resources */,
 				81D76DF51AF8CDEC0080D5FA /* 1430837614_StockIndexUp48.png in Resources */,
+				812DC9961AF9EADC000E9380 /* テンキー7.png in Resources */,
 				81D76DE61AF8CB380080D5FA /* 1430837106_graph-128.png in Resources */,
 				81D76DDF1AF8CB380080D5FA /* 1430837614_Stock Index Up.png in Resources */,
 				81D76DEB1AF8CCB70080D5FA /* 1430837284_ic_format_list_bulleted_32.png in Resources */,
@@ -324,9 +365,19 @@
 				81D76DE51AF8CB380080D5FA /* 1430837171_setting.png in Resources */,
 				81D76DE31AF8CB380080D5FA /* 1430837377_pen-checkbox-128.png in Resources */,
 				81E161F11AF31C2E0071ED01 /* LaunchScreen.xib in Resources */,
+				812DC9861AF9E6F9000E9380 /* テンキー.png in Resources */,
+				812DC99B1AF9EADC000E9380 /* テンキー2.png in Resources */,
+				812DC9981AF9EADC000E9380 /* テンキー5.png in Resources */,
 				81D76DE41AF8CB380080D5FA /* 1430837284_ic_format_list_bulleted_48px-128.png in Resources */,
+				812DC9941AF9EADC000E9380 /* テンキー9.png in Resources */,
 				81D76DE71AF8CB380080D5FA /* 1430836978_calendar-128.png in Resources */,
+				812DC9971AF9EADC000E9380 /* テンキー6.png in Resources */,
+				812DC9991AF9EADC000E9380 /* テンキー4.png in Resources */,
+				812DC9951AF9EADC000E9380 /* テンキー8.png in Resources */,
+				812DC99C1AF9EADC000E9380 /* テンキー1.png in Resources */,
 				812DC9831AF8D571000E9380 /* 1430836978_calendar-24.png in Resources */,
+				812DC99A1AF9EADC000E9380 /* テンキー3.png in Resources */,
+				812DC9921AF9EADC000E9380 /* テンキーBack.png in Resources */,
 				81E161EE1AF31C2E0071ED01 /* Images.xcassets in Resources */,
 				81D76DED1AF8CCFE0080D5FA /* 1430836978_calendar-32.png in Resources */,
 				81D76DE11AF8CB380080D5FA /* 1430837494_previous-128.png in Resources */,
@@ -356,6 +407,7 @@
 				81003B591AF5B4AB00600ED6 /* ListDisplayTableViewCell.swift in Sources */,
 				81E161E91AF31C2E0071ED01 /* ViewController.swift in Sources */,
 				81E1620A1AF31DB90071ED01 /* SwiftData.swift in Sources */,
+				812DC99E1AF9EC32000E9380 /* TenKeyTableViewCell.swift in Sources */,
 				81003B5B1AF5B4EF00600ED6 /* ListDisplayViewController.swift in Sources */,
 				81E161E71AF31C2E0071ED01 /* AppDelegate.swift in Sources */,
 				81D83E781AF871E500057D5D /* SettingTableViewController.swift in Sources */,

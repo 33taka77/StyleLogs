@@ -51,22 +51,24 @@ class MainCollectionViewCell: UICollectionViewCell,UITableViewDataSource,UITable
         if isChildCell(indexPath) {
             cell = tableView.dequeueReusableCellWithIdentifier("expandInputCell") as! UITableViewCell
             let expandCell:ValueInputTableViewCell = cell as! ValueInputTableViewCell
+            
             switch clickIndex {
             case 0:
                 expandCell.setupDataPicker(KindOfCell.morningWeight, date: styleData["date"] as! NSDate)
-                expandCell.unit.text = "Kg"
+                expandCell.unitLabel.text = "Kg"
             case 1:
                 expandCell.setupDataPicker(KindOfCell.morningFat, date: styleData["date"] as! NSDate)
-                expandCell.unit.text = "%"
+                expandCell.unitLabel.text = "%"
             case 2:
                 expandCell.setupDataPicker(KindOfCell.eveningWeight, date: styleData["date"] as! NSDate)
-                expandCell.unit.text = "Kg"
+                expandCell.unitLabel.text = "Kg"
             case 3:
                 expandCell.setupDataPicker(KindOfCell.eveningFat, date: styleData["date"] as! NSDate)
-                expandCell.unit.text = "%"
+                expandCell.unitLabel.text = "%"
             default:
                 println("error")
             }
+            
         }else{
             cell = tableView.dequeueReusableCellWithIdentifier("valueLabelCell") as! UITableViewCell
             let topCell:ValueLabelTableViewCell = cell as! ValueLabelTableViewCell
@@ -280,12 +282,16 @@ class MainCollectionViewCell: UICollectionViewCell,UITableViewDataSource,UITable
                     println("error")
                 }
                 */
+                //let targetIndexPath:NSIndexPath = NSIndexPath(forItem: indexPath.row+1, inSection: 0)
+                //let cell:ValueInputTableViewCell = self.tableView(tableView, cellForRowAtIndexPath: targetIndexPath) as! ValueInputTableViewCell
+                //cell.updateValue()
                 closeCell(indexPath.row)
                 clickIndex = -1
                 NSNotificationCenter.defaultCenter().postNotificationName(NOTFY_UPDATE_VALUE, object: nil)
             }else{
                 if clickIndex > -1 {
                     closeCell(clickIndex)
+                    NSNotificationCenter.defaultCenter().postNotificationName(NOTFY_UPDATE_VALUE, object: nil)
                 }
                 if clickIndex > -1 && indexPath.row > clickIndex {
                     clickIndex = indexPath.row-1
@@ -327,7 +333,9 @@ class MainCollectionViewCell: UICollectionViewCell,UITableViewDataSource,UITable
     
     private func getValueToLabel( tableView:UITableView, indexPath:NSIndexPath )->CGFloat {
         let targetIndexPath:NSIndexPath = NSIndexPath(forItem: indexPath.row+1, inSection: 0)
+        
         let cell:ValueInputTableViewCell = self.tableView(tableView, cellForRowAtIndexPath: targetIndexPath) as! ValueInputTableViewCell
+        
         var result:CGFloat
         var tag:Int = cell.getTag()
         if tag == 0 {
@@ -335,6 +343,7 @@ class MainCollectionViewCell: UICollectionViewCell,UITableViewDataSource,UITable
         }else{
             result = cell.getFatValue()
         }
+
         return result
     }
 

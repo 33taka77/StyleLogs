@@ -13,7 +13,7 @@ enum KindOfPickerData {
     case fat
 }
 
-class ValueInputTableViewCell: UITableViewCell ,UIPickerViewDataSource,UIPickerViewDelegate {
+class ValueInputTableViewCell: UITableViewCell ,UIPickerViewDataSource,UIPickerViewDelegate,UITextFieldDelegate {
 
     private var listOfPickerItem1:[String] = []
     private var listOfPickerItem2:[String] = []
@@ -22,6 +22,7 @@ class ValueInputTableViewCell: UITableViewCell ,UIPickerViewDataSource,UIPickerV
     var selectFatValue:CGFloat = 20.0
     var currentDate:NSDate!
     
+    
     @IBOutlet weak var unit: UILabel!
     @IBOutlet weak var pickerViewControl: UIPickerView!
     override func awakeFromNib() {
@@ -29,17 +30,91 @@ class ValueInputTableViewCell: UITableViewCell ,UIPickerViewDataSource,UIPickerV
         // Initialization code
     }
 
-    
+
+    @IBOutlet weak var unitLabel: UILabel!
+    @IBOutlet weak var inputTextField: UITextField!
+    @IBAction func tenkeybaskPush(sender: AnyObject) {
+        var str:String = inputTextField.text
+        let length:Int = count(str)
+        if length < 1 {
+            return
+        }
+        str = str.substringToIndex(advance(str.startIndex, length-1))
+        inputTextField.text = str
+        updateValue()
+    }
+    @IBAction func tenkeyDotPush(sender: AnyObject) {
+        var str:String = inputTextField.text
+        str = str + "."
+        inputTextField.text = str
+        updateValue()
+    }
+    @IBAction func tenkey9Push(sender: AnyObject) {
+        var str:String = inputTextField.text
+        str = str + "9"
+        inputTextField.text = str
+        updateValue()
+    }
+    @IBAction func tenkey8Push(sender: AnyObject) {
+        var str:String = inputTextField.text
+        str = str + "8"
+        inputTextField.text = str
+        updateValue()
+    }
+    @IBAction func tenkey7Push(sender: AnyObject) {
+        var str:String = inputTextField.text
+        str = str + "7"
+        inputTextField.text = str
+        updateValue()
+    }
+    @IBAction func tenkey6Push(sender: AnyObject) {
+        var str:String = inputTextField.text
+        str = str + "6"
+        inputTextField.text = str
+        updateValue()
+    }
+    @IBAction func tenkey5Push(sender: AnyObject) {
+        var str:String = inputTextField.text
+        str = str + "5"
+        inputTextField.text = str
+        updateValue()
+    }
+    @IBAction func tenkey4Push(sender: AnyObject) {
+        var str:String = inputTextField.text
+        str = str + "4"
+        inputTextField.text = str
+        updateValue()
+    }
+    @IBAction func tenKey1Push(sender: AnyObject) {
+        var str:String = inputTextField.text
+        str = str + "1"
+        inputTextField.text = str
+        updateValue()
+    }
+    @IBAction func tenKey2Push(sender: AnyObject) {
+        var str:String = inputTextField.text
+        str = str + "2"
+        inputTextField.text = str
+        updateValue()
+    }
+    @IBAction func tenkey3Push(sender: AnyObject) {
+        var str:String = inputTextField.text
+        str = str + "3"
+        inputTextField.text = str
+        updateValue()
+    }
     override func setSelected(selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
     }
     func setupDataPicker( kind:KindOfCell, date:NSDate ) {
-        pickerViewControl.delegate = self
-        pickerViewControl.dataSource = self
+ //       pickerViewControl.delegate = self
+ //       pickerViewControl.dataSource = self
+        inputTextField.delegate = self
         kindOfPicker = kind
         currentDate = date
+        
         switch kind {
         case .morningWeight,.eveningWeight:
             for var i:Int = 0; i < 140; i++ {
@@ -58,9 +133,9 @@ class ValueInputTableViewCell: UITableViewCell ,UIPickerViewDataSource,UIPickerV
                     }
                 }
             }
-            pickerViewControl.selectRow(75, inComponent: 0, animated: false)
-            pickerViewControl.selectRow(30, inComponent: 1, animated: false)
-            pickerViewControl.tag = 0
+ //           pickerViewControl.selectRow(75, inComponent: 0, animated: false)
+ //           pickerViewControl.selectRow(30, inComponent: 1, animated: false)
+ //           pickerViewControl.tag = 0
         case .morningFat, .eveningFat:
             for var i:Int = 0; i < 40; i++ {
                 let str:String = String(format:"%d",i)
@@ -71,9 +146,9 @@ class ValueInputTableViewCell: UITableViewCell ,UIPickerViewDataSource,UIPickerV
                 let str = "." + tmpStr
                 listOfPickerItem2.append(str)
             }
-            pickerViewControl.selectRow(30, inComponent: 0, animated: false)
-            pickerViewControl.selectRow(5, inComponent: 1, animated: false)
-            pickerViewControl.tag = 1
+//            pickerViewControl.selectRow(30, inComponent: 0, animated: false)
+//            pickerViewControl.selectRow(5, inComponent: 1, animated: false)
+//            pickerViewControl.tag = 1
         default:
             println("")
         }
@@ -231,4 +306,64 @@ class ValueInputTableViewCell: UITableViewCell ,UIPickerViewDataSource,UIPickerV
         return result
     }
 
+    func updateValue() {
+        let str = inputTextField.text
+        let date = currentDate
+        let dataManager = DataMngr.sharedInstance
+        switch kindOfPicker {
+        case .morningWeight:
+            let value = NSString(string: str).floatValue
+            dataManager.update(["weightMorning":value], targetDate: date)
+        case .morningFat:
+            let value = NSString(string: str).floatValue
+            dataManager.update(["bodyFatPercentageMorning":value], targetDate: date)
+        case .eveningWeight:
+            let value = NSString(string: str).floatValue
+            dataManager.update(["weightEvening":value], targetDate: date)
+        case .eveningFat:
+            let value = NSString(string: str).floatValue
+            dataManager.update(["bodyFatPercentageEvening":value], targetDate: date)
+        default:
+            println("error")
+        }
+    }
+    func textFieldShouldBeginEditing(textField: UITextField) -> Bool {
+        return false
+    }
+    func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {
+        let str = inputTextField.text
+        let length:Int = count(str)
+        let date = currentDate
+        var result:Bool = true
+        let dataManager = DataMngr.sharedInstance
+        switch kindOfPicker {
+        case .morningWeight:
+            if length > 6 {
+                result = false
+            }
+            let value = NSString(string: str).floatValue
+            dataManager.update(["weightMorning":value], targetDate: date)
+        case .morningFat:
+            if length > 4 {
+                result = false
+            }
+            let value = NSString(string: str).floatValue
+            dataManager.update(["bodyFatPercentageMorning":value], targetDate: date)
+        case .eveningWeight:
+            if length > 6 {
+                result = false
+            }
+            let value = NSString(string: str).floatValue
+            dataManager.update(["weightEvening":value], targetDate: date)
+        case .eveningFat:
+            if length > 4 {
+                result = false
+            }
+            let value = NSString(string: str).floatValue
+            dataManager.update(["bodyFatPercentageEvening":value], targetDate: date)
+        default:
+            println("error")
+        }
+        return result
+    }
 }
