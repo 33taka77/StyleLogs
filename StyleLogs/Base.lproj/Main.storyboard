@@ -70,7 +70,7 @@
                                                                 <autoresizingMask key="autoresizingMask"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="朝　体脂肪率" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pvt-eF-wV9">
-                                                                        <rect key="frame" x="18" y="11" width="102" height="21"/>
+                                                                        <rect key="frame" x="38" y="11" width="102" height="21"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="width" constant="102" id="9mt-NU-zNK"/>
                                                                             <constraint firstAttribute="height" constant="21" id="Di0-4U-dIk"/>
@@ -105,7 +105,7 @@
                                                                     <constraint firstAttribute="centerY" secondItem="Pvt-eF-wV9" secondAttribute="centerY" id="Xl9-2k-IZV"/>
                                                                     <constraint firstItem="cU2-Xg-K78" firstAttribute="leading" secondItem="gb9-0W-215" secondAttribute="trailing" constant="-1" id="Yim-lP-vCI"/>
                                                                     <constraint firstAttribute="centerY" secondItem="gb9-0W-215" secondAttribute="centerY" id="ciG-Ol-MDA"/>
-                                                                    <constraint firstItem="Pvt-eF-wV9" firstAttribute="leading" secondItem="vxr-LH-s9m" secondAttribute="leadingMargin" constant="10" id="iaM-ll-u08"/>
+                                                                    <constraint firstItem="Pvt-eF-wV9" firstAttribute="leading" secondItem="vxr-LH-s9m" secondAttribute="leadingMargin" constant="30" id="iaM-ll-u08"/>
                                                                     <constraint firstAttribute="centerY" secondItem="cU2-Xg-K78" secondAttribute="centerY" id="nd0-kI-Hfn"/>
                                                                 </constraints>
                                                             </tableViewCellContentView>
