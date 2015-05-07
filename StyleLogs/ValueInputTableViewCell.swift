@@ -43,6 +43,12 @@ class ValueInputTableViewCell: UITableViewCell ,UIPickerViewDataSource,UIPickerV
         inputTextField.text = str
         updateValue()
     }
+    @IBAction func tenkey0Push(sender: AnyObject) {
+        var str:String = inputTextField.text
+        str = str + "0"
+        inputTextField.text = str
+        updateValue()
+    }
     @IBAction func tenkeyDotPush(sender: AnyObject) {
         var str:String = inputTextField.text
         str = str + "."

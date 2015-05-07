@@ -28,6 +28,7 @@
 		812DC99B1AF9EADC000E9380 /* テンキー2.png in Resources */ = {isa = PBXBuildFile; fileRef = 812DC9901AF9EADC000E9380 /* テンキー2.png */; };
 		812DC99C1AF9EADC000E9380 /* テンキー1.png in Resources */ = {isa = PBXBuildFile; fileRef = 812DC9911AF9EADC000E9380 /* テンキー1.png */; };
 		812DC99E1AF9EC32000E9380 /* TenKeyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812DC99D1AF9EC32000E9380 /* TenKeyTableViewCell.swift */; };
+		812DC9A01AFA1967000E9380 /* テンキー0.png in Resources */ = {isa = PBXBuildFile; fileRef = 812DC99F1AFA1967000E9380 /* テンキー0.png */; };
 		81C9D9491AF61B75009C7328 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C9D9481AF61B75009C7328 /* CalendarViewController.swift */; };
 		81C9D94B1AF61F10009C7328 /* CalendarCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C9D94A1AF61F10009C7328 /* CalendarCollectionViewCell.swift */; };
 		81C9D94D1AF70EB3009C7328 /* GraphViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C9D94C1AF70EB3009C7328 /* GraphViewController.swift */; };
@@ -95,6 +96,7 @@
 		812DC9901AF9EADC000E9380 /* テンキー2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "テンキー2.png"; sourceTree = "<group>"; };
 		812DC9911AF9EADC000E9380 /* テンキー1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "テンキー1.png"; sourceTree = "<group>"; };
 		812DC99D1AF9EC32000E9380 /* TenKeyTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TenKeyTableViewCell.swift; sourceTree = "<group>"; };
+		812DC99F1AFA1967000E9380 /* テンキー0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "テンキー0.png"; sourceTree = "<group>"; };
 		81C9D9481AF61B75009C7328 /* CalendarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		81C9D94A1AF61F10009C7328 /* CalendarCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarCollectionViewCell.swift; sourceTree = "<group>"; };
 		81C9D94C1AF70EB3009C7328 /* GraphViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphViewController.swift; sourceTree = "<group>"; };
@@ -157,6 +159,7 @@
 		812DC9841AF8D6B3000E9380 /* icon */ = {
 			isa = PBXGroup;
 			children = (
+				812DC99F1AFA1967000E9380 /* テンキー0.png */,
 				812DC9871AF9EADC000E9380 /* テンキーBack.png */,
 				812DC9881AF9EADC000E9380 /* テンキーDot.png */,
 				812DC9891AF9EADC000E9380 /* テンキー9.png */,
@@ -373,6 +376,7 @@
 				81D76DE71AF8CB380080D5FA /* 1430836978_calendar-128.png in Resources */,
 				812DC9971AF9EADC000E9380 /* テンキー6.png in Resources */,
 				812DC9991AF9EADC000E9380 /* テンキー4.png in Resources */,
+				812DC9A01AFA1967000E9380 /* テンキー0.png in Resources */,
 				812DC9951AF9EADC000E9380 /* テンキー8.png in Resources */,
 				812DC99C1AF9EADC000E9380 /* テンキー1.png in Resources */,
 				812DC9831AF8D571000E9380 /* 1430836978_calendar-24.png in Resources */,

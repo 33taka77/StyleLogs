@@ -65,6 +65,7 @@ class ViewController: UIViewController,UICollectionViewDelegateFlowLayout,UIColl
         self.StatusPanel.setTranslatesAutoresizingMaskIntoConstraints(true)
         self.StatusPanel.frame = CGRectMake(statusPanelMargin,self.view.frame.height - statusPanelHeight-2*statusPanelMargin-buttomzbarHeight,self.view.frame.width-2*statusPanelMargin, statusPanelHeight)
         self.collectionView.setTranslatesAutoresizingMaskIntoConstraints(true)
+        self.collectionView.showsHorizontalScrollIndicator = false
         self.collectionView.frame = CGRectMake(0,barHeight,self.view.frame.width, self.view.frame.height-barHeight-statusPanelHeight-2*statusPanelMargin-buttomzbarHeight)
         setupDateData()
         seupPanelInfo()
@@ -159,14 +160,54 @@ class ViewController: UIViewController,UICollectionViewDelegateFlowLayout,UIColl
     
     private func seupPanelInfo() {
         let dataManager = DataMngr.sharedInstance
-        averageWeightLabel.text = String(format: "%.2f", arguments: [dataManager.averageWeigh])
-        averageBodyFatLabel.text = String(format: "%.1f", arguments: [dataManager.averageBodyFat])
-        targetWeightLabel.text = String(format: "%.2f", arguments: [dataManager.personalTargetWeight])
-        targetBodyFaatLabel.text = String(format: "%.1f", arguments: [dataManager.personalTargetBodyFat])
-        BMILabel.text = String(format: "%.1f", arguments: [dataManager.BMI])
-        remainWeightLabel.text = String(format: "%.2f", arguments: [dataManager.remainWeight])
-        remainBodyFatLabel.text = String(format: "%.1f", arguments: [dataManager.remainFatRate])
-        achivementLabel.text = String(format: "%.2f", arguments: [dataManager.achievement])
+        var value = dataManager.averageWeigh
+        if value == -1 {
+            averageWeightLabel.text = "--"
+        }else{
+            averageWeightLabel.text = String(format: "%.2f", arguments: [dataManager.averageWeigh])
+        }
+        value = dataManager.averageBodyFat
+        if value == -1 {
+            averageBodyFatLabel.text = "--"
+        }else{
+            averageBodyFatLabel.text = String(format: "%.1f", arguments: [dataManager.averageBodyFat])
+        }
+        value = dataManager.personalTargetWeight
+        if value == -1 {
+            targetWeightLabel.text = "--"
+        }else{
+            targetWeightLabel.text = String(format: "%.2f", arguments: [dataManager.personalTargetWeight])
+        }
+        value = dataManager.personalTargetBodyFat
+        if value == -1 {
+            targetBodyFaatLabel.text = "--"
+        }else{
+            targetBodyFaatLabel.text = String(format: "%.1f", arguments: [dataManager.personalTargetBodyFat])
+        }
+        value = dataManager.BMI
+        if value == -1 {
+            BMILabel.text = "--"
+        }else{
+            BMILabel.text = String(format: "%.1f", arguments: [dataManager.BMI])
+        }
+        value = dataManager.remainWeight
+        if value == -1 {
+            remainWeightLabel.text = "--"
+        }else{
+            remainWeightLabel.text = String(format: "%.2f", arguments: [dataManager.remainWeight])
+        }
+        value = dataManager.remainFatRate
+        if value == -1 {
+            remainBodyFatLabel.text = "--"
+        }else{
+            remainBodyFatLabel.text = String(format: "%.1f", arguments: [dataManager.remainFatRate])
+        }
+        value = dataManager.achievement
+        if value == -1 {
+            achivementLabel.text = "--"
+        }else{
+            achivementLabel.text = String(format: "%.2f", arguments: [dataManager.achievement])
+        }
         
     }
     func numberOfSectionsInCollectionView(collectionView:UICollectionView)->NSInteger{

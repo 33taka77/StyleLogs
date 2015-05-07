@@ -120,39 +120,39 @@
                                                             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="a1l-rK-ilS" id="i9O-vX-mW7">
                                                                 <autoresizingMask key="autoresizingMask"/>
                                                                 <subviews>
-                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lhl-X0-F7c">
-                                                                        <rect key="frame" x="53" y="8" width="51" height="48"/>
+                                                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lhl-X0-F7c">
+                                                                        <rect key="frame" x="109" y="8" width="51" height="48"/>
                                                                         <constraints>
-                                                                            <constraint firstAttribute="height" constant="48" id="39R-3i-rue"/>
-                                                                            <constraint firstAttribute="width" constant="51" id="j8b-Xd-AoM"/>
+                                                                            <constraint firstAttribute="width" constant="51" id="6BT-8a-kHO"/>
+                                                                            <constraint firstAttribute="height" constant="48" id="BCc-Dp-rd6"/>
                                                                         </constraints>
-                                                                        <state key="normal" title="Button" image="テンキー1.png">
+                                                                        <state key="normal" image="テンキー1.png">
                                                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                                         </state>
                                                                         <connections>
                                                                             <action selector="tenKey1Push:" destination="a1l-rK-ilS" eventType="touchUpInside" id="ylI-eN-iGu"/>
                                                                         </connections>
                                                                     </button>
-                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dBf-QW-0b7">
-                                                                        <rect key="frame" x="112" y="8" width="49" height="48"/>
+                                                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dBf-QW-0b7">
+                                                                        <rect key="frame" x="168" y="8" width="49" height="48"/>
                                                                         <constraints>
-                                                                            <constraint firstAttribute="height" constant="48" id="mAm-uZ-buw"/>
-                                                                            <constraint firstAttribute="width" constant="49" id="qEl-KZ-pfe"/>
+                                                                            <constraint firstAttribute="height" constant="48" id="f0G-ZP-Z3T"/>
+                                                                            <constraint firstAttribute="width" constant="49" id="u6T-3i-8cn"/>
                                                                         </constraints>
-                                                                        <state key="normal" title="Button" image="テンキー2.png">
+                                                                        <state key="normal" image="テンキー2.png">
                                                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                                         </state>
                                                                         <connections>
                                                                             <action selector="tenKey2Push:" destination="a1l-rK-ilS" eventType="touchUpInside" id="zZ7-xf-dnn"/>
                                                                         </connections>
                                                                     </button>
-                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gav-u9-efr">
-                                                                        <rect key="frame" x="226" y="8" width="49" height="48"/>
+                                                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gav-u9-efr">
+                                                                        <rect key="frame" x="282" y="63" width="49" height="48"/>
                                                                         <constraints>
-                                                                            <constraint firstAttribute="height" constant="48" id="kOn-of-ssY"/>
-                                                                            <constraint firstAttribute="width" constant="49" id="uHJ-g6-A2I"/>
+                                                                            <constraint firstAttribute="width" constant="49" id="0Pz-RQ-bSA"/>
+                                                                            <constraint firstAttribute="height" constant="48" id="BwB-0E-uXA"/>
                                                                         </constraints>
-                                                                        <state key="normal" title="Button" image="テンキーDot.png">
+                                                                        <state key="normal" image="テンキーDot.png">
                                                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                                         </state>
                                                                         <connections>
@@ -160,12 +160,12 @@
                                                                         </connections>
                                                                     </button>
                                                                     <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aEp-Aq-b7w">
-                                                                        <rect key="frame" x="53" y="63" width="49" height="48"/>
+                                                                        <rect key="frame" x="110" y="64" width="49" height="48"/>
                                                                         <constraints>
-                                                                            <constraint firstAttribute="width" constant="49" id="1O8-g0-NM5"/>
-                                                                            <constraint firstAttribute="height" constant="48" id="VhT-b7-bPg"/>
+                                                                            <constraint firstAttribute="width" constant="49" id="Pdm-5d-Rrf"/>
+                                                                            <constraint firstAttribute="height" constant="48" id="eDA-Hc-stz"/>
                                                                         </constraints>
-                                                                        <state key="normal" title="Button" image="テンキー4.png">
+                                                                        <state key="normal" image="テンキー4.png">
                                                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                                         </state>
                                                                         <connections>
@@ -173,12 +173,12 @@
                                                                         </connections>
                                                                     </button>
                                                                     <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lTj-gZ-7PO">
-                                                                        <rect key="frame" x="112" y="63" width="49" height="48"/>
+                                                                        <rect key="frame" x="168" y="63" width="49" height="48"/>
                                                                         <constraints>
-                                                                            <constraint firstAttribute="height" constant="48" id="Mwj-wm-SJW"/>
-                                                                            <constraint firstAttribute="width" constant="49" id="VVD-7B-icg"/>
+                                                                            <constraint firstAttribute="height" constant="48" id="DrB-Kk-f0T"/>
+                                                                            <constraint firstAttribute="width" constant="49" id="y4E-Gj-zxd"/>
                                                                         </constraints>
-                                                                        <state key="normal" title="Button" image="テンキー5.png">
+                                                                        <state key="normal" image="テンキー5.png">
                                                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                                         </state>
                                                                         <connections>
@@ -186,12 +186,12 @@
                                                                         </connections>
                                                                     </button>
                                                                     <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Pw-bx-QQG">
-                                                                        <rect key="frame" x="169" y="63" width="49" height="48"/>
+                                                                        <rect key="frame" x="225" y="63" width="49" height="48"/>
                                                                         <constraints>
-                                                                            <constraint firstAttribute="width" constant="49" id="aQv-Ve-kew"/>
-                                                                            <constraint firstAttribute="height" constant="48" id="wTZ-UQ-oEi"/>
+                                                                            <constraint firstAttribute="width" constant="49" id="eTK-Sc-qnS"/>
+                                                                            <constraint firstAttribute="height" constant="48" id="mfg-9d-aLx"/>
                                                                         </constraints>
-                                                                        <state key="normal" title="Button" image="テンキー6.png">
+                                                                        <state key="normal" image="テンキー6.png">
                                                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                                         </state>
                                                                         <connections>
@@ -199,12 +199,12 @@
                                                                         </connections>
                                                                     </button>
                                                                     <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WbK-6C-Fhn">
-                                                                        <rect key="frame" x="226" y="63" width="49" height="48"/>
+                                                                        <rect key="frame" x="282" y="8" width="49" height="48"/>
                                                                         <constraints>
-                                                                            <constraint firstAttribute="width" constant="49" id="NRZ-4g-A8a"/>
-                                                                            <constraint firstAttribute="height" constant="48" id="bSY-ad-QvH"/>
+                                                                            <constraint firstAttribute="width" constant="49" id="YLN-pS-boQ"/>
+                                                                            <constraint firstAttribute="height" constant="48" id="s1U-eb-aeU"/>
                                                                         </constraints>
-                                                                        <state key="normal" title="Button" image="テンキーBack.png">
+                                                                        <state key="normal" image="テンキーBack.png">
                                                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                                         </state>
                                                                         <connections>
@@ -212,106 +212,115 @@
                                                                         </connections>
                                                                     </button>
                                                                     <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HCz-NA-FA5">
-                                                                        <rect key="frame" x="54" y="119" width="49" height="48"/>
+                                                                        <rect key="frame" x="110" y="119" width="49" height="48"/>
                                                                         <constraints>
-                                                                            <constraint firstAttribute="height" constant="48" id="1Tj-MZ-mh7"/>
-                                                                            <constraint firstAttribute="width" constant="49" id="N0a-cE-5u4"/>
+                                                                            <constraint firstAttribute="width" constant="49" id="fxs-6p-YEt"/>
+                                                                            <constraint firstAttribute="height" constant="48" id="vNq-hT-v08"/>
                                                                         </constraints>
-                                                                        <state key="normal" title="Button" image="テンキー7.png">
+                                                                        <state key="normal" image="テンキー7.png">
                                                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                                         </state>
                                                                         <connections>
                                                                             <action selector="tenkey7Push:" destination="a1l-rK-ilS" eventType="touchUpInside" id="qju-pg-SvN"/>
                                                                         </connections>
                                                                     </button>
-                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6TA-g5-3Xm">
-                                                                        <rect key="frame" x="112" y="119" width="49" height="48"/>
+                                                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6TA-g5-3Xm">
+                                                                        <rect key="frame" x="168" y="119" width="49" height="48"/>
                                                                         <constraints>
-                                                                            <constraint firstAttribute="height" constant="48" id="4td-GA-E84"/>
-                                                                            <constraint firstAttribute="width" constant="49" id="pR1-sU-leR"/>
+                                                                            <constraint firstAttribute="height" constant="48" id="Ke9-CL-hp5"/>
+                                                                            <constraint firstAttribute="width" constant="49" id="Uah-Nx-vZR"/>
                                                                         </constraints>
-                                                                        <state key="normal" title="Button" image="テンキー8.png">
+                                                                        <state key="normal" image="テンキー8.png">
                                                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                                         </state>
                                                                         <connections>
                                                                             <action selector="tenkey8Push:" destination="a1l-rK-ilS" eventType="touchUpInside" id="S2v-Zk-eFB"/>
                                                                         </connections>
                                                                     </button>
-                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JOP-gh-Bmn">
-                                                                        <rect key="frame" x="169" y="119" width="49" height="48"/>
+                                                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JOP-gh-Bmn">
+                                                                        <rect key="frame" x="225" y="119" width="49" height="48"/>
                                                                         <constraints>
-                                                                            <constraint firstAttribute="height" constant="48" id="AA6-fK-ka8"/>
-                                                                            <constraint firstAttribute="width" constant="49" id="EtJ-Ze-kP2"/>
+                                                                            <constraint firstAttribute="height" constant="48" id="X4E-6B-gqX"/>
+                                                                            <constraint firstAttribute="width" constant="49" id="zza-55-R3r"/>
                                                                         </constraints>
-                                                                        <state key="normal" title="Button" image="テンキー9.png">
+                                                                        <state key="normal" image="テンキー9.png">
                                                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                                         </state>
                                                                         <connections>
                                                                             <action selector="tenkey9Push:" destination="a1l-rK-ilS" eventType="touchUpInside" id="GUF-mI-aMd"/>
                                                                         </connections>
                                                                     </button>
-                                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rOI-Cu-Aon">
-                                                                        <rect key="frame" x="226" y="119" width="59" height="25"/>
-                                                                        <constraints>
-                                                                            <constraint firstAttribute="height" constant="25" id="GdD-bD-b7N"/>
-                                                                            <constraint firstAttribute="width" constant="59" id="aem-OB-hDu"/>
-                                                                        </constraints>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Kg" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G4h-mF-s60">
+                                                                        <rect key="frame" x="375" y="147" width="26" height="21"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                                        <textInputTraits key="textInputTraits"/>
-                                                                    </textField>
-                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kFl-05-7he">
-                                                                        <rect key="frame" x="169" y="8" width="49" height="48"/>
+                                                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kFl-05-7he">
+                                                                        <rect key="frame" x="225" y="8" width="49" height="48"/>
                                                                         <constraints>
-                                                                            <constraint firstAttribute="width" constant="49" id="ArY-YN-6al"/>
-                                                                            <constraint firstAttribute="height" constant="48" id="QDl-j6-uAs"/>
+                                                                            <constraint firstAttribute="width" constant="49" id="Pjv-HO-QwW"/>
+                                                                            <constraint firstAttribute="height" constant="48" id="a8J-Mw-v4m"/>
                                                                         </constraints>
-                                                                        <state key="normal" title="Button" image="テンキー3.png">
+                                                                        <state key="normal" image="テンキー3.png">
                                                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                                         </state>
                                                                         <connections>
                                                                             <action selector="tenkey3Push:" destination="a1l-rK-ilS" eventType="touchUpInside" id="iRM-zg-Kj0"/>
                                                                         </connections>
                                                                     </button>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kg" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G4h-mF-s60">
-                                                                        <rect key="frame" x="265" y="145" width="26" height="21"/>
+                                                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kNb-uo-HEi">
+                                                                        <rect key="frame" x="282" y="119" width="49" height="48"/>
                                                                         <constraints>
-                                                                            <constraint firstAttribute="height" constant="21" id="Jea-l2-9eZ"/>
-                                                                            <constraint firstAttribute="width" constant="26" id="NRz-Lu-gEg"/>
+                                                                            <constraint firstAttribute="width" constant="49" id="Cwg-Y4-x3h"/>
+                                                                            <constraint firstAttribute="height" constant="48" id="DXl-7t-1L6"/>
+                                                                        </constraints>
+                                                                        <state key="normal" image="テンキー0.png">
+                                                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                                        </state>
+                                                                        <connections>
+                                                                            <action selector="tenkey0Push:" destination="a1l-rK-ilS" eventType="touchUpInside" id="Q0f-4t-47Q"/>
+                                                                        </connections>
+                                                                    </button>
+                                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rOI-Cu-Aon">
+                                                                        <rect key="frame" x="339" y="119" width="59" height="30"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="height" constant="30" id="DWU-rL-7NF"/>
+                                                                            <constraint firstAttribute="width" constant="59" id="srV-Fq-RdU"/>
                                                                         </constraints>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                                        <nil key="highlightedColor"/>
-                                                                    </label>
+                                                                        <textInputTraits key="textInputTraits"/>
+                                                                    </textField>
                                                                 </subviews>
                                                                 <constraints>
-                                                                    <constraint firstItem="dBf-QW-0b7" firstAttribute="top" secondItem="i9O-vX-mW7" secondAttribute="topMargin" id="10v-Ap-AZD"/>
-                                                                    <constraint firstItem="JOP-gh-Bmn" firstAttribute="top" secondItem="5Pw-bx-QQG" secondAttribute="bottom" constant="8" id="4NX-JT-RC4"/>
-                                                                    <constraint firstItem="lTj-gZ-7PO" firstAttribute="top" secondItem="dBf-QW-0b7" secondAttribute="bottom" constant="7" id="4y7-he-9eP"/>
-                                                                    <constraint firstItem="Gav-u9-efr" firstAttribute="leading" secondItem="kFl-05-7he" secondAttribute="trailing" constant="8" id="6XB-tG-Bi9"/>
-                                                                    <constraint firstItem="rOI-Cu-Aon" firstAttribute="leading" secondItem="JOP-gh-Bmn" secondAttribute="trailing" constant="8" id="Ed3-NM-Uvx"/>
-                                                                    <constraint firstItem="rOI-Cu-Aon" firstAttribute="top" secondItem="WbK-6C-Fhn" secondAttribute="bottom" constant="8" id="Ew0-3c-vhl"/>
-                                                                    <constraint firstItem="5Pw-bx-QQG" firstAttribute="leading" secondItem="lTj-gZ-7PO" secondAttribute="trailing" constant="8" id="VN3-s9-q84"/>
-                                                                    <constraint firstItem="dBf-QW-0b7" firstAttribute="leading" secondItem="lhl-X0-F7c" secondAttribute="trailing" constant="8" id="XLm-Y1-Kke"/>
-                                                                    <constraint firstItem="G4h-mF-s60" firstAttribute="leading" secondItem="rOI-Cu-Aon" secondAttribute="trailing" constant="-20" id="XSg-yR-gye"/>
-                                                                    <constraint firstItem="kFl-05-7he" firstAttribute="leading" secondItem="dBf-QW-0b7" secondAttribute="trailing" constant="8" id="aUu-XG-m6j"/>
-                                                                    <constraint firstItem="Gav-u9-efr" firstAttribute="top" secondItem="i9O-vX-mW7" secondAttribute="topMargin" id="bYT-Xi-NYf"/>
-                                                                    <constraint firstItem="lhl-X0-F7c" firstAttribute="leading" secondItem="i9O-vX-mW7" secondAttribute="leadingMargin" constant="45" id="dfd-uu-y2v"/>
-                                                                    <constraint firstItem="aEp-Aq-b7w" firstAttribute="leading" secondItem="i9O-vX-mW7" secondAttribute="leadingMargin" constant="45" id="fDm-yZ-u20"/>
-                                                                    <constraint firstItem="WbK-6C-Fhn" firstAttribute="leading" secondItem="5Pw-bx-QQG" secondAttribute="trailing" constant="8" id="fJt-pv-sV1"/>
-                                                                    <constraint firstItem="6TA-g5-3Xm" firstAttribute="top" secondItem="lTj-gZ-7PO" secondAttribute="bottom" constant="8" id="fNg-IC-AEi"/>
-                                                                    <constraint firstItem="aEp-Aq-b7w" firstAttribute="top" secondItem="lhl-X0-F7c" secondAttribute="bottom" constant="8" id="le3-lJ-2vL"/>
-                                                                    <constraint firstItem="lhl-X0-F7c" firstAttribute="leading" secondItem="i9O-vX-mW7" secondAttribute="leadingMargin" constant="45" id="nlE-Y4-kyw"/>
-                                                                    <constraint firstItem="G4h-mF-s60" firstAttribute="top" secondItem="i9O-vX-mW7" secondAttribute="topMargin" constant="137" id="q8o-LK-lGz"/>
-                                                                    <constraint firstItem="kFl-05-7he" firstAttribute="top" secondItem="i9O-vX-mW7" secondAttribute="topMargin" id="qka-WK-vMK"/>
-                                                                    <constraint firstItem="lhl-X0-F7c" firstAttribute="top" secondItem="i9O-vX-mW7" secondAttribute="topMargin" id="rsi-rH-NRa"/>
-                                                                    <constraint firstItem="HCz-NA-FA5" firstAttribute="top" secondItem="aEp-Aq-b7w" secondAttribute="bottom" constant="8" id="t1p-nq-sWX"/>
-                                                                    <constraint firstItem="lTj-gZ-7PO" firstAttribute="leading" secondItem="aEp-Aq-b7w" secondAttribute="trailing" constant="8" id="teG-lc-Ucu"/>
-                                                                    <constraint firstItem="lhl-X0-F7c" firstAttribute="top" secondItem="i9O-vX-mW7" secondAttribute="topMargin" id="u68-36-KVY"/>
-                                                                    <constraint firstItem="5Pw-bx-QQG" firstAttribute="top" secondItem="kFl-05-7he" secondAttribute="bottom" constant="7" id="uNg-j5-1rZ"/>
-                                                                    <constraint firstItem="WbK-6C-Fhn" firstAttribute="top" secondItem="Gav-u9-efr" secondAttribute="bottom" constant="7" id="vhX-6b-9gr"/>
-                                                                    <constraint firstItem="HCz-NA-FA5" firstAttribute="leading" secondItem="i9O-vX-mW7" secondAttribute="leadingMargin" constant="46" id="xg7-Vs-8GR"/>
-                                                                    <constraint firstItem="6TA-g5-3Xm" firstAttribute="leading" secondItem="HCz-NA-FA5" secondAttribute="trailing" constant="9" id="yh4-J7-nDv"/>
-                                                                    <constraint firstItem="JOP-gh-Bmn" firstAttribute="leading" secondItem="6TA-g5-3Xm" secondAttribute="trailing" constant="8" id="zv6-rk-Ion"/>
+                                                                    <constraint firstItem="kNb-uo-HEi" firstAttribute="top" secondItem="Gav-u9-efr" secondAttribute="bottom" constant="8" id="58Y-CP-0ju"/>
+                                                                    <constraint firstItem="lTj-gZ-7PO" firstAttribute="leading" secondItem="aEp-Aq-b7w" secondAttribute="trailing" constant="9" id="5Wq-bf-9qw"/>
+                                                                    <constraint firstItem="G4h-mF-s60" firstAttribute="top" secondItem="i9O-vX-mW7" secondAttribute="topMargin" constant="139" id="Irl-I2-8JB"/>
+                                                                    <constraint firstAttribute="centerX" secondItem="dBf-QW-0b7" secondAttribute="centerX" constant="60" id="JcI-Ee-g7e"/>
+                                                                    <constraint firstItem="rOI-Cu-Aon" firstAttribute="top" secondItem="i9O-vX-mW7" secondAttribute="topMargin" constant="111" id="LST-NJ-dBK"/>
+                                                                    <constraint firstItem="6TA-g5-3Xm" firstAttribute="top" secondItem="lTj-gZ-7PO" secondAttribute="bottom" constant="8" id="ODK-mJ-R5G"/>
+                                                                    <constraint firstItem="aEp-Aq-b7w" firstAttribute="top" secondItem="lhl-X0-F7c" secondAttribute="bottom" constant="8" id="VmK-Qx-AoS"/>
+                                                                    <constraint firstItem="5Pw-bx-QQG" firstAttribute="top" secondItem="kFl-05-7he" secondAttribute="bottom" constant="7" id="W6h-FJ-PAW"/>
+                                                                    <constraint firstItem="6TA-g5-3Xm" firstAttribute="leading" secondItem="HCz-NA-FA5" secondAttribute="trailing" constant="9" id="W9D-zC-wn3"/>
+                                                                    <constraint firstItem="kFl-05-7he" firstAttribute="top" secondItem="i9O-vX-mW7" secondAttribute="topMargin" id="WHA-wv-xjd"/>
+                                                                    <constraint firstItem="kNb-uo-HEi" firstAttribute="leading" secondItem="JOP-gh-Bmn" secondAttribute="trailing" constant="8" id="WMy-4c-s8R"/>
+                                                                    <constraint firstItem="dBf-QW-0b7" firstAttribute="leading" secondItem="lhl-X0-F7c" secondAttribute="trailing" constant="8" id="X3F-Z4-k4t"/>
+                                                                    <constraint firstItem="JOP-gh-Bmn" firstAttribute="top" secondItem="5Pw-bx-QQG" secondAttribute="bottom" constant="8" id="Y3S-GG-94P"/>
+                                                                    <constraint firstItem="dBf-QW-0b7" firstAttribute="top" secondItem="i9O-vX-mW7" secondAttribute="topMargin" id="bfT-VP-GzH"/>
+                                                                    <constraint firstItem="lhl-X0-F7c" firstAttribute="top" secondItem="i9O-vX-mW7" secondAttribute="topMargin" id="cbW-A0-JfC"/>
+                                                                    <constraint firstItem="G4h-mF-s60" firstAttribute="leading" secondItem="kNb-uo-HEi" secondAttribute="trailing" constant="44" id="ch6-mF-c3G"/>
+                                                                    <constraint firstAttribute="centerX" secondItem="6TA-g5-3Xm" secondAttribute="centerX" constant="60" id="ckf-aA-72K"/>
+                                                                    <constraint firstItem="kFl-05-7he" firstAttribute="leading" secondItem="dBf-QW-0b7" secondAttribute="trailing" constant="8" id="eu2-Bl-MQu"/>
+                                                                    <constraint firstItem="lTj-gZ-7PO" firstAttribute="top" secondItem="dBf-QW-0b7" secondAttribute="bottom" constant="7" id="gKw-fS-kcf"/>
+                                                                    <constraint firstItem="Gav-u9-efr" firstAttribute="top" secondItem="WbK-6C-Fhn" secondAttribute="bottom" constant="7" id="hbB-hl-G5f"/>
+                                                                    <constraint firstItem="WbK-6C-Fhn" firstAttribute="top" secondItem="i9O-vX-mW7" secondAttribute="topMargin" id="iyI-4a-h2P"/>
+                                                                    <constraint firstItem="WbK-6C-Fhn" firstAttribute="leading" secondItem="kFl-05-7he" secondAttribute="trailing" constant="8" id="lbf-fN-bKp"/>
+                                                                    <constraint firstItem="JOP-gh-Bmn" firstAttribute="leading" secondItem="6TA-g5-3Xm" secondAttribute="trailing" constant="8" id="lil-3E-B0a"/>
+                                                                    <constraint firstAttribute="centerX" secondItem="lTj-gZ-7PO" secondAttribute="centerX" constant="60" id="o4p-ad-gcV"/>
+                                                                    <constraint firstItem="HCz-NA-FA5" firstAttribute="top" secondItem="aEp-Aq-b7w" secondAttribute="bottom" constant="7" id="pCt-0F-SZ3"/>
+                                                                    <constraint firstItem="5Pw-bx-QQG" firstAttribute="leading" secondItem="lTj-gZ-7PO" secondAttribute="trailing" constant="8" id="qbj-fQ-vpH"/>
+                                                                    <constraint firstItem="rOI-Cu-Aon" firstAttribute="leading" secondItem="kNb-uo-HEi" secondAttribute="trailing" constant="8" id="wjW-he-ZzK"/>
+                                                                    <constraint firstItem="Gav-u9-efr" firstAttribute="leading" secondItem="5Pw-bx-QQG" secondAttribute="trailing" constant="8" id="wrt-40-ynD"/>
                                                                 </constraints>
                                                             </tableViewCellContentView>
                                                             <connections>
@@ -1551,6 +1560,7 @@
         <image name="1430837377_pen-checkbox-32.png" width="32" height="32"/>
         <image name="1430837487_next-32.png" width="32" height="32"/>
         <image name="1430837494_previous-32.png" width="32" height="32"/>
+        <image name="テンキー0.png" width="48" height="48"/>
         <image name="テンキー1.png" width="48" height="48"/>
         <image name="テンキー2.png" width="48" height="48"/>
         <image name="テンキー3.png" width="48" height="48"/>
