@@ -11,5 +11,6 @@
 
 
 #import "sqlite3.h"
+#import "NADView.h"
 
 #endif

@@ -29,6 +29,13 @@
 		812DC99C1AF9EADC000E9380 /* テンキー1.png in Resources */ = {isa = PBXBuildFile; fileRef = 812DC9911AF9EADC000E9380 /* テンキー1.png */; };
 		812DC99E1AF9EC32000E9380 /* TenKeyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812DC99D1AF9EC32000E9380 /* TenKeyTableViewCell.swift */; };
 		812DC9A01AFA1967000E9380 /* テンキー0.png in Resources */ = {isa = PBXBuildFile; fileRef = 812DC99F1AFA1967000E9380 /* テンキー0.png */; };
+		812DC9A91AFC9729000E9380 /* libNendAd.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 812DC9A21AFC9729000E9380 /* libNendAd.a */; };
+		812DC9AA1AFC9729000E9380 /* NADView_readme.txt in Resources */ = {isa = PBXBuildFile; fileRef = 812DC9A81AFC9729000E9380 /* NADView_readme.txt */; };
+		812DC9AC1AFC978D000E9380 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 812DC9AB1AFC978D000E9380 /* AdSupport.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		812DC9AE1AFC979D000E9380 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 812DC9AD1AFC979D000E9380 /* ImageIO.framework */; };
+		812DC9B01AFC97B2000E9380 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 812DC9AF1AFC97B2000E9380 /* Security.framework */; };
+		81BFF70F1AFF3109008F3057 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81E161EA1AF31C2E0071ED01 /* Main.storyboard */; };
+		81BFF7101AFF3114008F3057 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81E161EF1AF31C2E0071ED01 /* LaunchScreen.xib */; };
 		81C9D9491AF61B75009C7328 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C9D9481AF61B75009C7328 /* CalendarViewController.swift */; };
 		81C9D94B1AF61F10009C7328 /* CalendarCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C9D94A1AF61F10009C7328 /* CalendarCollectionViewCell.swift */; };
 		81C9D94D1AF70EB3009C7328 /* GraphViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C9D94C1AF70EB3009C7328 /* GraphViewController.swift */; };
@@ -53,9 +60,7 @@
 		81D83E781AF871E500057D5D /* SettingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D83E771AF871E500057D5D /* SettingTableViewController.swift */; };
 		81E161E71AF31C2E0071ED01 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E161E61AF31C2E0071ED01 /* AppDelegate.swift */; };
 		81E161E91AF31C2E0071ED01 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E161E81AF31C2E0071ED01 /* ViewController.swift */; };
-		81E161EC1AF31C2E0071ED01 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81E161EA1AF31C2E0071ED01 /* Main.storyboard */; };
 		81E161EE1AF31C2E0071ED01 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 81E161ED1AF31C2E0071ED01 /* Images.xcassets */; };
-		81E161F11AF31C2E0071ED01 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81E161EF1AF31C2E0071ED01 /* LaunchScreen.xib */; };
 		81E161FD1AF31C2E0071ED01 /* StyleLogsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E161FC1AF31C2E0071ED01 /* StyleLogsTests.swift */; };
 		81E162071AF31C820071ED01 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 81E162061AF31C820071ED01 /* libsqlite3.dylib */; };
 		81E1620A1AF31DB90071ED01 /* SwiftData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E162091AF31DB90071ED01 /* SwiftData.swift */; };
@@ -97,6 +102,16 @@
 		812DC9911AF9EADC000E9380 /* テンキー1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "テンキー1.png"; sourceTree = "<group>"; };
 		812DC99D1AF9EC32000E9380 /* TenKeyTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TenKeyTableViewCell.swift; sourceTree = "<group>"; };
 		812DC99F1AFA1967000E9380 /* テンキー0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "テンキー0.png"; sourceTree = "<group>"; };
+		812DC9A21AFC9729000E9380 /* libNendAd.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libNendAd.a; sourceTree = "<group>"; };
+		812DC9A31AFC9729000E9380 /* NADIconArrayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NADIconArrayView.h; sourceTree = "<group>"; };
+		812DC9A41AFC9729000E9380 /* NADIconLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NADIconLoader.h; sourceTree = "<group>"; };
+		812DC9A51AFC9729000E9380 /* NADIconView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NADIconView.h; sourceTree = "<group>"; };
+		812DC9A61AFC9729000E9380 /* NADInterstitial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NADInterstitial.h; sourceTree = "<group>"; };
+		812DC9A71AFC9729000E9380 /* NADView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NADView.h; sourceTree = "<group>"; };
+		812DC9A81AFC9729000E9380 /* NADView_readme.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = NADView_readme.txt; sourceTree = "<group>"; };
+		812DC9AB1AFC978D000E9380 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
+		812DC9AD1AFC979D000E9380 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
+		812DC9AF1AFC97B2000E9380 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		81C9D9481AF61B75009C7328 /* CalendarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		81C9D94A1AF61F10009C7328 /* CalendarCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarCollectionViewCell.swift; sourceTree = "<group>"; };
 		81C9D94C1AF70EB3009C7328 /* GraphViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphViewController.swift; sourceTree = "<group>"; };
@@ -142,7 +157,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				812DC9B01AFC97B2000E9380 /* Security.framework in Frameworks */,
+				812DC9AE1AFC979D000E9380 /* ImageIO.framework in Frameworks */,
+				812DC9AC1AFC978D000E9380 /* AdSupport.framework in Frameworks */,
 				81E162071AF31C820071ED01 /* libsqlite3.dylib in Frameworks */,
+				812DC9A91AFC9729000E9380 /* libNendAd.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -197,9 +216,26 @@
 			name = icon;
 			sourceTree = "<group>";
 		};
+		812DC9A11AFC9729000E9380 /* NendAd */ = {
+			isa = PBXGroup;
+			children = (
+				812DC9A21AFC9729000E9380 /* libNendAd.a */,
+				812DC9A31AFC9729000E9380 /* NADIconArrayView.h */,
+				812DC9A41AFC9729000E9380 /* NADIconLoader.h */,
+				812DC9A51AFC9729000E9380 /* NADIconView.h */,
+				812DC9A61AFC9729000E9380 /* NADInterstitial.h */,
+				812DC9A71AFC9729000E9380 /* NADView.h */,
+				812DC9A81AFC9729000E9380 /* NADView_readme.txt */,
+			);
+			path = NendAd;
+			sourceTree = "<group>";
+		};
 		81E161D81AF31C2E0071ED01 = {
 			isa = PBXGroup;
 			children = (
+				812DC9AF1AFC97B2000E9380 /* Security.framework */,
+				812DC9AD1AFC979D000E9380 /* ImageIO.framework */,
+				812DC9AB1AFC978D000E9380 /* AdSupport.framework */,
 				81E162061AF31C820071ED01 /* libsqlite3.dylib */,
 				81E161E31AF31C2E0071ED01 /* StyleLogs */,
 				81E161F91AF31C2E0071ED01 /* StyleLogsTests */,
@@ -219,6 +255,7 @@
 		81E161E31AF31C2E0071ED01 /* StyleLogs */ = {
 			isa = PBXGroup;
 			children = (
+				812DC9A11AFC9729000E9380 /* NendAd */,
 				812DC9841AF8D6B3000E9380 /* icon */,
 				81E1620F1AF31DE50071ED01 /* GradiateView.swift */,
 				81E1620D1AF31DD00071ED01 /* SmartGraph.swift */,
@@ -350,15 +387,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81BFF7101AFF3114008F3057 /* LaunchScreen.xib in Resources */,
+				81BFF70F1AFF3109008F3057 /* Main.storyboard in Resources */,
 				812DC97F1AF8D2BC000E9380 /* 1430837487_next-32.png in Resources */,
 				81D76DEF1AF8CD330080D5FA /* 1430837171_setting32.png in Resources */,
 				81D76DF91AF8CEBB0080D5FA /* 1430837106_graph-32.png in Resources */,
 				812DC9811AF8D33D000E9380 /* 1430837494_previous-32.png in Resources */,
 				81D76DF31AF8CDA70080D5FA /* 1430837487_next-48.png in Resources */,
-				81E161EC1AF31C2E0071ED01 /* Main.storyboard in Resources */,
 				812DC9931AF9EADC000E9380 /* テンキーDot.png in Resources */,
 				81D76DE01AF8CB380080D5FA /* 1430837623_Stock Index Down.png in Resources */,
 				81D76DF51AF8CDEC0080D5FA /* 1430837614_StockIndexUp48.png in Resources */,
+				812DC9AA1AFC9729000E9380 /* NADView_readme.txt in Resources */,
 				812DC9961AF9EADC000E9380 /* テンキー7.png in Resources */,
 				81D76DE61AF8CB380080D5FA /* 1430837106_graph-128.png in Resources */,
 				81D76DDF1AF8CB380080D5FA /* 1430837614_Stock Index Up.png in Resources */,
@@ -367,7 +406,6 @@
 				81D76DF11AF8CD730080D5FA /* 1430837494_previous-48.png in Resources */,
 				81D76DE51AF8CB380080D5FA /* 1430837171_setting.png in Resources */,
 				81D76DE31AF8CB380080D5FA /* 1430837377_pen-checkbox-128.png in Resources */,
-				81E161F11AF31C2E0071ED01 /* LaunchScreen.xib in Resources */,
 				812DC9861AF9E6F9000E9380 /* テンキー.png in Resources */,
 				812DC99B1AF9EADC000E9380 /* テンキー2.png in Resources */,
 				812DC9981AF9EADC000E9380 /* テンキー5.png in Resources */,
@@ -549,9 +587,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = StyleLogs/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/StyleLogs/NendAd",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "cf37af7b-59f4-4eb5-8e71-beb88f5c6fec";
 				SWIFT_OBJC_BRIDGING_HEADER = "StyleLogs/StyleLogs-BridgeHeader.h";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -559,10 +604,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Takashi Aizawa (B7Y86D9M44)";
 				INFOPLIST_FILE = StyleLogs/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/StyleLogs/NendAd",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "cf37af7b-59f4-4eb5-8e71-beb88f5c6fec";
 				SWIFT_OBJC_BRIDGING_HEADER = "StyleLogs/StyleLogs-BridgeHeader.h";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

@@ -10,7 +10,7 @@ import UIKit
 
 let NOTFY_UPDATE_VALUE = "notifyCellDataUpdate"
 
-class ViewController: UIViewController,UICollectionViewDelegateFlowLayout,UICollectionViewDelegate,UICollectionViewDataSource, UIScrollViewDelegate {
+class ViewController: UIViewController,UICollectionViewDelegateFlowLayout,UICollectionViewDelegate,UICollectionViewDataSource, UIScrollViewDelegate,NADViewDelegate {
 
     private let statusPanelHeight:CGFloat = 150
     private let statusPanelMargin:CGFloat = 5
@@ -18,7 +18,12 @@ class ViewController: UIViewController,UICollectionViewDelegateFlowLayout,UIColl
     private let buttomzbarHeight:CGFloat = 44
     private var styleLogDatas:[Dictionary<String,Any>]! = []
     private var currentPage:Int = 0
+    private var nadViewManually: NADView!
+    private var currentCollecionCell:MainCollectionViewCell!
+    private var isShowAD = true
     
+    @IBOutlet weak var naviBar: UINavigationBar!
+    @IBOutlet weak var bannerViewFromNib: NADView!
     @IBOutlet weak var prevButton: UIBarButtonItem!
     @IBOutlet weak var nextButton: UIBarButtonItem!
     @IBOutlet weak var StatusPanel: GradiateView!
@@ -61,23 +66,96 @@ class ViewController: UIViewController,UICollectionViewDelegateFlowLayout,UIColl
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        if isShowAD == true {
+            // Do any additional setup after loading the view, typically from a nib.
+            self.bannerViewFromNib.setTranslatesAutoresizingMaskIntoConstraints(true)
+            self.bannerViewFromNib.frame = CGRectMake(0, 0, self.view.frame.width, 50)
+            bannerViewFromNib.delegate = self
+        
+            // コードでバナー広告を生成
+            nadViewManually = NADView()
+            nadViewManually.autoresizingMask = UIViewAutoresizing.FlexibleRightMargin | UIViewAutoresizing.FlexibleLeftMargin | UIViewAutoresizing.FlexibleTopMargin
+        
+            // 広告枠のapikey/spotidを設定(必須)
+            nadViewManually.setNendID("b8fcb4074aa07e3b20349bd4aa7501bfd9c33ffe", spotID: "365711")
+        
+            // nendSDKログ出力の設定(任意)
+            nadViewManually.isOutputLog = true
+        
+            // delegateを受けるオブジェクトを指定(必須)
+            nadViewManually.delegate = self
+        
+            // 読み込み開始(必須)
+            nadViewManually.load()
+            self.naviBar.setTranslatesAutoresizingMaskIntoConstraints(true)
+
+            self.naviBar.frame = CGRectMake(0, 50+16, self.view.frame.width, 44)
+
+        }else{
+            self.naviBar.setTranslatesAutoresizingMaskIntoConstraints(true)
+            
+            self.naviBar.frame = CGRectMake(0, 16, self.view.frame.width, 44)
+        }
         self.StatusPanel.setTranslatesAutoresizingMaskIntoConstraints(true)
         self.StatusPanel.frame = CGRectMake(statusPanelMargin,self.view.frame.height - statusPanelHeight-2*statusPanelMargin-buttomzbarHeight,self.view.frame.width-2*statusPanelMargin, statusPanelHeight)
         self.collectionView.setTranslatesAutoresizingMaskIntoConstraints(true)
         self.collectionView.showsHorizontalScrollIndicator = false
-        self.collectionView.frame = CGRectMake(0,barHeight,self.view.frame.width, self.view.frame.height-barHeight-statusPanelHeight-2*statusPanelMargin-buttomzbarHeight)
+        if isShowAD == true {
+            self.collectionView.frame = CGRectMake(0,barHeight+50,self.view.frame.width, self.view.frame.height-barHeight-statusPanelHeight-2*statusPanelMargin-buttomzbarHeight-50)
+        }else{
+            self.collectionView.frame = CGRectMake(0,barHeight,self.view.frame.width, self.view.frame.height-barHeight-statusPanelHeight-2*statusPanelMargin-buttomzbarHeight)
+        }
         setupDateData()
         seupPanelInfo()
         currentPage = styleLogDatas.count-1
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "GetValue", name: NOTFY_UPDATE_VALUE, object:nil)
+        
     }
+    
+    deinit{
+        
+        // delegateには必ずnilセットして解放する
+        bannerViewFromNib.delegate = nil
+        bannerViewFromNib = nil
+        
+        nadViewManually.delegate = nil
+        nadViewManually = nil
+    }
+
     func GetValue() {
         styleLogDatas = nil
         let dataManager = DataMngr.sharedInstance
         styleLogDatas = dataManager.selectAll()
         self.collectionView.reloadData()
         seupPanelInfo()
+    }
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        if isShowAD == true {
+            // 再開
+            bannerViewFromNib.resume()
+            nadViewManually.resume()
+        
+            // 注意：他アプリ起動から、自アプリが復帰した際に広告のリフレッシュを再開するには
+            // AppDelegate applicationWillEnterForeground などを利用してください
+        
+            // 画面下部に広告を表示させる場合
+
+            nadViewManually.frame = CGRect(x: (self.view.frame.size.width - 320)/2, y: 16, width: 320, height: 50)
+
+        }
+    }
+    // この画面が隠れたら、広告のリフレッシュを中断します
+    override func viewWillDisappear(animated: Bool) {
+        super.viewWillDisappear(animated)
+        if isShowAD == true{
+            // 中断
+            bannerViewFromNib.pause()
+            nadViewManually.pause()
+        
+            // 注意：safariなど他アプリが起動し自分自身が背後に回った際に広告のリフレッシュを中止するには
+            // AppDelegate applicationDidEnterBackground などを利用してください
+        }
     }
 
     override func shouldAutorotate() -> Bool {
@@ -86,7 +164,12 @@ class ViewController: UIViewController,UICollectionViewDelegateFlowLayout,UIColl
     override func viewDidLayoutSubviews() {
         let offset = styleLogDatas.count
         movePage(currentPage)
-        nextButton.enabled = false
+        if offset-1 == currentPage {
+            nextButton.enabled = false
+        }
+        if currentCollecionCell != nil {
+            currentCollecionCell.updateTableView()
+        }
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -131,7 +214,7 @@ class ViewController: UIViewController,UICollectionViewDelegateFlowLayout,UIColl
 
             var flag:Bool = false
             for dict in styleLogDatas {
-                println("\(dict.description)")
+                //println("\(dict.description)")
                 if let date:NSDate = dict["date"] as? NSDate {
                     if IsEqualDate(soueseDate, date) {
                         flag = true
@@ -220,8 +303,10 @@ class ViewController: UIViewController,UICollectionViewDelegateFlowLayout,UIColl
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let index = indexPath.row
         let cell:MainCollectionViewCell = self.collectionView.dequeueReusableCellWithReuseIdentifier("MaincollectionCell", forIndexPath: indexPath) as! MainCollectionViewCell
-        cell.setupStyleData( styleLogDatas[indexPath.row] as Dictionary<String,Any> )
+        cell.setupStyleData( styleLogDatas[indexPath.row] as Dictionary<String,Any>, rect: CGRectMake(self.collectionView.frame.origin.x, self.collectionView.frame.origin.y, self.collectionView.frame.width, self.collectionView.frame.height))
         println("cellForTtemAtIndex: \(indexPath.row)")
+        cell.updateTableView()
+        currentCollecionCell = cell
         return cell as UICollectionViewCell
     }
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
@@ -249,6 +334,21 @@ class ViewController: UIViewController,UICollectionViewDelegateFlowLayout,UIColl
         dateFormatter.dateFormat = "YYYY/MM/dd"
         let strDate:String = dateFormatter.stringFromDate(date)
         barItem.title = strDate
+    }
+
+    func nadViewDidFinishLoad(adView: NADView!) {
+        if isShowAD == true {
+            if (adView == bannerViewFromNib){
+                println("nadViewDidFinishLoad,bannerViewFromNib:\(adView)")
+            }else if (adView == nadViewManually){
+                println("nadViewDidFinishLoad,nadViewManually:\(adView)")
+            
+                // 広告の受信と表示の成功が通知されてからViewを乗せる場合はnadViewDidFinishLoadを利用します。
+                self.view.addSubview(nadViewManually)
+            }else{
+            
+            }
+        }
     }
 
 }

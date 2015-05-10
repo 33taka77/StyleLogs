@@ -74,7 +74,7 @@ class SmartGraph: UIView {
         color.setStroke()
         linePath.lineWidth = 1.0
         linePath.stroke()
-        self.drawText( margin*2+lineLength+5,y: height - (bottomBorder-30)-10, string: graph1Label, fontSize: 8.0, textColor: UIColor.whiteColor())
+        self.drawText( margin*2+lineLength+5,y: height - (bottomBorder-30)-10, string: graph1Label, fontSize: 9.0, textColor: UIColor.whiteColor())
         
         var linePath2 = UIBezierPath()
         linePath2.moveToPoint(CGPoint(x: margin*2+lineInterval, y: height - (bottomBorder-30)))
@@ -83,11 +83,12 @@ class SmartGraph: UIView {
         color2.setStroke()
         linePath2.lineWidth = 1.0
         linePath2.stroke()
-        self.drawText( margin*2+lineInterval+lineLength+5,y: height - (bottomBorder-30)-10, string: graph2Label, fontSize: 8.0, textColor: UIColor.whiteColor())
+        self.drawText( margin*2+lineInterval+lineLength+5,y: height - (bottomBorder-30)-10, string: graph2Label, fontSize: 9.0, textColor: UIColor.whiteColor())
     }
     
     private func drawAxis(margin:CGFloat, topBorder:CGFloat, bottomBorder:CGFloat, width:CGFloat, height:CGFloat) {
         //Draw horizontal graph lines on the top of everything
+        
         cleanupLabel()
         var linePath = UIBezierPath()
         let graphHeight = height - topBorder - bottomBorder
@@ -97,7 +98,7 @@ class SmartGraph: UIView {
         linePath.addLineToPoint(CGPoint(x: width - margin,
             y:topBorder))
         let str = String(format: "%.1f", arguments: [maxValue()+10.0])
-        drawText( 3,y: topBorder-5, string: str, fontSize: 8.0, textColor: UIColor.whiteColor())
+        drawText( 3,y: topBorder-5, string: str, fontSize: 9.0, textColor: UIColor.whiteColor())
 
         let range:CGFloat = maxValue()+10.0 - (self.targetWeight-10.0)
         let numOfLine:CGFloat = range / 10.0
@@ -137,9 +138,16 @@ class SmartGraph: UIView {
         default:
             println("error")
         }
+        func xPoint(column:Int)->CGFloat {
+            let xSpace:CGFloat = (width - margin*CGFloat(2))/(CGFloat(count-1))
+            var point = xSpace*CGFloat(column)+margin-10
+            return point
+        }
+
         let space = (width - margin*2)/count
         for var j:Int = 0; j < plotLabel.count; j++ {
-            drawText( space*(CGFloat(j)+1),y: height - bottomBorder, string: plotLabel[j], fontSize: 8.0, textColor: UIColor.whiteColor())
+            //drawText( space*(CGFloat(j)+1),y: height - bottomBorder, string: plotLabel[j], fontSize: 9.0, textColor: UIColor.whiteColor())
+            drawText( xPoint(j),y: height - bottomBorder, string: plotLabel[j], fontSize: 9.0, textColor: UIColor.whiteColor())
         }
         
         

@@ -13,10 +13,13 @@ class MainCollectionViewCell: UICollectionViewCell,UITableViewDataSource,UITable
     private var datas:[NSIndexPath] = []
     private var currentTableCellCount = 4
     private var clickIndex:Int = -1
+    private var currentIndex:NSIndexPath!
     
     @IBOutlet weak var tableView: UITableView!
     
-    func setupStyleData( data:Dictionary<String,Any>) {
+    func setupStyleData( data:Dictionary<String,Any>, rect:CGRect) {
+        self.tableView.setTranslatesAutoresizingMaskIntoConstraints(true)
+        self.tableView.frame = CGRectMake(0, 0, rect.width, rect.height)
         styleData = data
         tableView.delegate = self
         tableView.dataSource = self
@@ -77,7 +80,7 @@ class MainCollectionViewCell: UICollectionViewCell,UITableViewDataSource,UITable
                 case 0:
                     topCell.mainLabel.text = "朝 体重"
                     topCell.unitLabel.text = "Kg"
-                    println("styleDta:" + styleData.description)
+                    //println("styleDta:" + styleData.description)
                     let value:Double = (self.styleData["weightMorning"] as? Double)!
                     let valStr = convertFloatToString(value, numOfUnderPoint: 2)
                     topCell.valueLabel.text = valStr
@@ -259,6 +262,7 @@ class MainCollectionViewCell: UICollectionViewCell,UITableViewDataSource,UITable
         return height
     }
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        currentIndex = indexPath
         if isChildCell(indexPath) {
             return
         }else{
@@ -306,6 +310,16 @@ class MainCollectionViewCell: UICollectionViewCell,UITableViewDataSource,UITable
         }
     }
     
+    func updateTableView() {
+        var indexPath:NSIndexPath
+        if currentIndex != nil {
+           indexPath =  currentIndex
+        }else{
+            indexPath = NSIndexPath(forRow: datas.count-1, inSection: 0)
+        }
+        self.tableView.scrollToRowAtIndexPath(indexPath, atScrollPosition: UITableViewScrollPosition.Bottom, animated: true)
+    }
+    
     private func closeCell( index:Int ) {
         let removeIndexPath:NSIndexPath = NSIndexPath(forItem: index+1, inSection: 0)
         var removePaths:NSMutableArray = NSMutableArray()
@@ -329,6 +343,8 @@ class MainCollectionViewCell: UICollectionViewCell,UITableViewDataSource,UITable
         self.tableView.insertRowsAtIndexPaths(insertPaths as [AnyObject], withRowAnimation: UITableViewRowAnimation.Fade)
         datas.append(insertIndexPath)
         currentTableCellCount = datas.count
+        currentIndex = insertIndexPath
+        NSNotificationCenter.defaultCenter().postNotificationName(NOTFY_UPDATE_VALUE, object: nil)
     }
     
     private func getValueToLabel( tableView:UITableView, indexPath:NSIndexPath )->CGFloat {

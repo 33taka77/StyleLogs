@@ -56,6 +56,11 @@ class CalendarViewController: UIViewController,UICollectionViewDelegateFlowLayou
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        styleDatas = dataManager.selectAll()
+        self.collectionView.reloadData()
+    }
     private func setupWeekLabel() {
         for var i=0; i<7; i++ {
             var interval:CGFloat = (view.frame.width/7)

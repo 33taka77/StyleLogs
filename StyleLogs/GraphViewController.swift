@@ -493,6 +493,12 @@ class GraphViewController: UIViewController {
     }
     
 
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        let dataManager:DataMngr = DataMngr.sharedInstance
+        styleDatas = dataManager.selectAll()
+        graphVIew.setNeedsDisplay()
+    }
     /*
     // MARK: - Navigation
 
