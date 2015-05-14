@@ -32,7 +32,11 @@ class DataMngr{
                     counter++
                 }
             }
-            return totalWeight/Float(counter)
+            if totalWeight == 0 {
+                return -1
+            }else{
+                return totalWeight/Float(counter)
+            }
         }
     }
     var averageBodyFat:Float {
@@ -52,7 +56,11 @@ class DataMngr{
                     counter++
                 }
             }
-            return totalFat/Float(counter)
+            if totalFat == 0 {
+                return -1
+            }else{
+                return totalFat/Float(counter)
+            }
         }
     }
     var BMI:Float {
@@ -77,9 +85,13 @@ class DataMngr{
                     break
                 }
             }
-            let averageWeight = total/Float(counter)
-            let bmi = averageWeight/(personalHeight/100 * personalHeight/100)
-            return bmi
+            if total == 0 {
+                return -1
+            }else{
+                let averageWeight = total/Float(counter)
+                let bmi = averageWeight/(personalHeight/100 * personalHeight/100)
+                return bmi
+            }
         }
     }
     var remainWeight:Float {
@@ -104,8 +116,12 @@ class DataMngr{
                     break
                 }
             }
-            let averageWeight = total/Float(counter)
-            return averageWeight-personalTargetWeight
+            if total == 0 {
+                return -1
+            }else{
+                let averageWeight = total/Float(counter)
+                return averageWeight-personalTargetWeight
+            }
         }
     }
     var remainFatRate:Float {
@@ -130,8 +146,12 @@ class DataMngr{
                     break
                 }
             }
-            let averageRate = total/Float(counter)
-            return averageRate-personalTargetBodyFat
+            if total == 0 {
+                return -1
+            }else{
+                let averageRate = total/Float(counter)
+                return averageRate-personalTargetBodyFat
+            }
         }
     }
     var achievement:Float {
@@ -171,10 +191,14 @@ class DataMngr{
                     break
                 }
             }
-            let averageWeight = total/Float(counter)
-            let achive = max - averageWeight
-            let bandWidth = max - personalTargetWeight
-            return (achive/bandWidth) * 100.0
+            if total == 0 {
+                return -1
+            }else{
+                let averageWeight = total/Float(counter)
+                let achive = max - averageWeight
+                let bandWidth = max - personalTargetWeight
+                return (achive/bandWidth) * 100.0
+            }
         }
     }
     
