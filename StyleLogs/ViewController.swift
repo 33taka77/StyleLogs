@@ -162,6 +162,7 @@ class ViewController: UIViewController,UICollectionViewDelegateFlowLayout,UIColl
         return false
     }
     override func viewDidLayoutSubviews() {
+        setupDateData()
         let offset = styleLogDatas.count
         movePage(currentPage)
         if offset-1 == currentPage {
